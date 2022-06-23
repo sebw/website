@@ -27,13 +27,6 @@ graph LR
   A
   AA
   end
-
-
 ```
 
-The above diagram represents a typical 3-tier architecture that you might find within 99% of organizations:
-
-- browser as the client (also called to presentation) tier
-- CMS as the application (also called business logic) tier
-- DB as the data tier
-
+During the course of the workshop, the above diagram will evolve with additional component. 
