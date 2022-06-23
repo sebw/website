@@ -8,6 +8,3 @@ DevSecOps with Red Hat® solutions is not only about helping organizations with 
 
 In this learning session we will provide an immersive experience for attendees to understand the differences between a siloed operating model versus a collaborative one through a practical application of the DevSecOps culture.
 
-## Learner Outcomes
-Provide an immersive experience for students through practical application of DevSecOps culture allowing students to experience the differences between a siloed operating model versus a collaborative one. 
-
