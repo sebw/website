@@ -5,13 +5,14 @@ Never forget that a drawings is better than a thousands words! Even if your draw
 
 ``` mermaid
 graph LR
-  A(browser) --> B{extranet};
+  A(browser) --> B{network};
+  AA(mobile) --> B;
   B --> C[load balancer];
   C --> D[CMS];
   C --> F(DNS)
   D --> E[DB]
 
-  subgraph intranet
+  subgraph  
     C
     subgraph app tier
       D
@@ -24,12 +25,9 @@ graph LR
 
   subgraph client
   A
+  AA
   end
 
-
-  subgraph data tier
-  E
-  end
 
 ```
 
