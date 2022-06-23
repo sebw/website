@@ -5,22 +5,16 @@ A drawings is better than a thousands words! Never forget this event if your dra
 
 ``` mermaid
 graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
+  A(user) --> B{extranet};
+  B --> C[load balancer];
+  C --> D[CMS];
+  C --> F(DNS)
+  D --> E[DB]
+
+  subgraph intranet
+    C
+    D
+    E
+    F
+  end
 ```
-
-<div class="result" markdown>
-
-``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
-
-</div>
