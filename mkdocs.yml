@@ -5,14 +5,16 @@ theme:
     repo: fontawesome/brands/github
   name: material
   palette: 
+    - scheme: slate
+      primary: red 
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
     - scheme: default
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-    - scheme: slate 
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
 extra:
   social:
     - icon: fontawesome/brands/github 
@@ -24,6 +26,8 @@ repo_name: beezy-cloud/website
 
 markdown_extensions:
   - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true  
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -36,5 +40,5 @@ nav:
   - Sections: 
     - The Operator Meance: 'operatormenace.md'
     - The Automation Strike Back: 'automationstrikeback.md'
-    - The Returns of Observability: 'returnoftheobservability.md'
-    - The DevSecOps Awakens: 'devsecopsawaken.md'
+    - The Return of Observability: 'returnoftheobservability.md'
+    - The DevSecOps Awakens: 'devsecopsawakens.md'
