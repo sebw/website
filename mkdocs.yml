@@ -45,6 +45,6 @@ nav:
   - Environment: 'environment.md'
   - Sections: 
     - The Operator Menace: 'operatormenace.md'
-    - The Automation Strike Back: 'automationstrikeback.md'
     - The Return of Observability: 'returnoftheobservability.md'
     - The DevSecOps Awakens: 'devsecopsawakens.md'
+    - The Automation Strike Back: 'automationstrikeback.md'
