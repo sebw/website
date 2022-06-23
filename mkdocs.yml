@@ -1,0 +1,45 @@
+site_name: beez.cloud
+site_url: https://docs.beezy.cloud
+theme:
+  icon:
+    repo: fontawesome/brands/github
+  name: material
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/beezy-cloud/website
+  generator: false
+copyright: Copyright &copy; 2022 beezy.cloud - Licensed under the Apache-2.0 License
+repo_url: https://github.com/beezy-cloud/website
+repo_name: beezy-cloud/website
+
+markdown_extensions:
+  - def_list
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+# nav:
+#   - Introduction: 'index.md'
+#   - Articles: 
+#     - The Intrepid Squirrel is Out!: '202112-article-the_intrepid_squirrel_is_out.md'
+#     - 3 Key Takeaways from KubeCon NA 2021: '202111-article-3_key_takeaways_from_kubecon_na_2021.md'
+#     - 'Stateful Application in Kubernetes: It pays to plan ahead': '202110-article-stateful_application_in_kubernetes_it_pays_to_plan_ahead.md'
+#     - On-premises vs Cloud Native Storage: '202108-article-on-premises_vs_cloud_native_storage.md'
+#     - The Biggest Gap in Kubernetes Storage Architecture: '202107-article-the_biggest_gap-in_kubernetes_storage_architecture.md'
+#     - How to Solve Kubernetes Persistent Storage Challenges: '202106-article-how_to_solve_kubernetes_persistent_storage_challenges.md'
+#     - Deploying Cloud Native Persistent Storage in the Age of Containers: '202105-article-deploying_cloud_native_persistent_storage_in_the_age_of_containers.md'
+#   - Presentations:
+#     - A Kubernetes ZeroTrust Model using a KMS Provider Plugin: '202206-presentation-hashiconf_europe.md'
+#     - How to Solve Kubernetes Secrets Conundrum : '202206-presentation-hashicorp_user_group.md'
