@@ -1,67 +1,97 @@
 
-## Diagram 
+## Architecture Overview 
 Never forget that a drawings is better than a thousands words! Even if your drawing skills did not evolve since kindergarden :wink:
 
-``` mermaid
-graph LR
-  A(browser) --> B{network};
-  AA(mobile) --> B;
-  B --> C[load balancer];
-  C --> D[CMS];
-  C --> F(DNS)
-  D --> E[DB]
+This lab introduces you to the architecture of the ParksMap application used throughout this workshop, to get a better understanding of the things you'll be doing from a developer perspective.  
+ParksMap is a polyglot geo-spatial data visualization application built using the microservices architecture and is composed of a set of services which are developed using different programming languages and frameworks.
 
-  subgraph  
-    C
-    subgraph app tier
-      D
-    end
-    subgraph data tier
-      E
-    end
-    F
-  end
+![application](/images/roadshow-app-architecture.png)
 
-  subgraph client
-  A
-  AA
-  end
+The main service is a web application which has a server-side component in charge of aggregating the geo-spatial APIs provided by multiple independent backend services and a client-side component in JavaScript that is responsible for visualizing the geo-spatial data on the map. The client-side component which runs in your browser communicates with the server-side via WebSockets protocol in order to update the map in real-time.
+
+There will be a set of independent backend services deployed that will provide different mapping and geo-spatial information. The set of available backend services that provide geo-spatial information are:
+
+* WorldWide National Parks
+* Major League Baseball Stadiums in North America
+
+The original source code for this application is located [here](https://github.com/openshift-roadshow/).
+
+The server-side component of the ParksMap web application acts as a communication gateway to all the available backends.   
+These backends will be dynamically discovered by using service discovery mechanisms provided by OpenShift which will be discussed in more details in the following labs.
+
+## Exploring the Environment
+###  Command Line Interface
+
+OpenShift includes a feature-rich web console with both an Administrator perspective and a Developer perspective. In addition to the web console, OpenShift includes command line tools
+to provide users with a nice interface to work with applications deployed to the
+platform.  The `oc` command line tool is an executable written in the Go
+programming language and is available for the following operating systems:
+
+- Microsoft Windows
+- macOS 10
+- Linux
+
+This lab environment has the `oc` command line tool installed, and your lab user is already logged in to the OpenShift cluster.
+
+Issue the following command to see help information:
+
+```
+oc help
 ```
 
-During the course of the workshop, the above diagram will evolve with additional component. 
+### Using a Project
 
-## Scenario
-Considering the above environment, the following teams will have to coordinate themselves in order to support the application through it life. 
+Projects are a top level concept to help you organize your deployments. An
+OpenShift project allows a community of users (or a user) to organize and manage
+their content in isolation from other communities. Each project has its own
+resources, policies (who can or cannot perform actions), and constraints (quotas
+and limits on resources, etc). Projects act as a "wrapper" around all the
+application services and endpoints you (or your teams) are using for your work.
 
-| Responsibility | Description | Team | 
-|----------------|-------------|------|
-| Provisioning | Deploying a physical or virtual machine machine | Infrastructure |
-| OS deployment  | Installing the OS on a machine | Infrastructure |
-| OS life cycle  | Upgrading & patching the OS on a machine   | Infrastructure |
-| Security alerts | Alerting the teams about security issues | Security |
-| App deployment | Installing the application on a machine | Application |
-| App life cycle | Upgrading & patching the application | Application |
-| Incident Mgmt | Creating, dispatching and following up | ITSM + relevant team |
-| Problem Mgmt | Creating, dispatching and following up | ITSM + relevant team |
-| Change Mgmt | Creating, dispatching and following  | ITSM + relevant team |
+During this lab, we are going to use a few different commands to make sure that
+things in the environment are working as expected.  Don't worry if you don't
+understand all of the terminology as we will cover it in detail in later labs.
 
-One team could be an umbrella for sub teams like:
+In this lab environment, you already have access to single project: *{{ project_namespace  }}*.
 
-- Infrastructure
-    - Rack & Stack
-    - Computing
-        - Hardware 
-        - Virtualization 
-    - Networking
-        - WAN
-        - LAN 
-        - Firewalling
-        - DNS/Proxy/LB
-        - PBX
-    - Storage
-    - Back-up
+If you had multiple projects, the first thing you would want to do is to switch
+to the *{{ project_namespace  }}* project to make sure you're on the correct project from now on.
+You can do this with the following command:
 
-Each teams will have a Team Leader or Service Owner that will act as single point of contact. Communication will be following a 80/20 ratio for ticket/human interactions.  
+```
+oc project {{ project_namespace  }}
+```
 
-This represent +90% of the current Enterprise IT organization landscape. 
+### The Web Console
 
+OpenShift ships with a web-based console that will allow users to
+perform various tasks via a browser. 
+
+To get a feel for how the web console works, click on this http://console-openshift-console.{{cluster_subdomain}}/k8s/cluster/projects[Web Console] link.
+
+On the login screen, enter the following credentials:
+
+```
+Username: username
+Password: openshift
+```
+The first time you access the web console, you will most likely be in the Administrator perspective. You will be presented with the list of Projects that you can access, and you will see something that looks like the following image:
+
+![Web Console](/images/explore-webconsole1sc.png)
+
+Click on the *{{ project_namespace  }}* project link. When you click on the
+*{{ project_namespace  }}* project, you will be taken to the project details page,
+which will list some metrics and details about your project. There's nothing there now, but that will change as you progress through the lab.
+
+![Explore Project](/images/explore-webconsole2.png)
+
+At the top of the left navigation menu, you can toggle between the Administrator perspective and the Developer perspective.
+
+![Toggle Between Perspectives](/images/explore-perspective-toggle.png)
+
+Select *Developer* to switch to the Developer perspective. Once the Developer perspective loads, you should be in the *Topology* view. Right now, there are no applications or components to view, but once you begin working on the lab, you'll be able to visualize and interact with the components in your application here.
+
+![Add New Applications](/images/explore-topology-view.png)
+
+We will be using a mix of command line tooling and the web console for the labs.
+Get ready!

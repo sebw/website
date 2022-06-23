@@ -25,6 +25,7 @@ repo_url: https://github.com/beezy-cloud/website
 repo_name: beezy-cloud/website
 
 markdown_extensions:
+  - pymdownx.critic
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
@@ -41,10 +42,9 @@ markdown_extensions:
 nav:
   - Introduction: 'index.md'
   - Breakdown: 'breakdown.md'
-  - Original Environment: 'environment.md'
+  - Environment: 'environment.md'
   - Sections: 
     - The Operator Menace: 'operatormenace.md'
     - The Automation Strike Back: 'automationstrikeback.md'
     - The Return of Observability: 'returnoftheobservability.md'
     - The DevSecOps Awakens: 'devsecopsawakens.md'
-  - Final Environment: 'finalenvironment.md'
