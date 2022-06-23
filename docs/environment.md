@@ -45,3 +45,23 @@ Considering the above environment, the following teams will have to coordinate t
 | Problem Mgmt | Creating, dispatching and following up | ITSM + relevant team |
 | Change Mgmt | Creating, dispatching and following  | ITSM + relevant team |
 
+One team could be an umbrella for sub teams like:
+
+- Infrastructure
+    - Rack & Stack
+    - Computing
+        - Hardware 
+        - Virtualization 
+    - Networking
+        - WAN
+        - LAN 
+        - Firewalling
+        - DNS/Proxy/LB
+        - PBX
+    - Storage
+    - Back-up
+
+Each teams will have a Team Leader or Service Owner that will act as single point of contact. Communication will be following a 80/20 ratio for ticket/human interactions.  
+
+This represent +90% of the current Enterprise IT organization landscape. 
+
