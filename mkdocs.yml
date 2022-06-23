@@ -37,6 +37,7 @@ markdown_extensions:
 nav:
   - Introduction: 'index.md'
   - Breakdown: 'breakdown.md'
+  - Environment: 'environment.md'
   - Sections: 
     - The Operator Menace: 'operatormenace.md'
     - The Automation Strike Back: 'automationstrikeback.md'
