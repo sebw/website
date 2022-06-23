@@ -31,7 +31,7 @@ programming language and is available for the following operating systems:
 - macOS 10
 - Linux
 
-This lab environment has the `oc` command line tool installed, and your lab user is already logged in to the OpenShift cluster.
+This lab environment requires the `oc` command line tool to be installed. [Download here.](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/latest/).
 
 Issue the following command to see help information:
 
