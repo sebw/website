@@ -388,6 +388,7 @@ only one *Pod* currently running.  In the next lab, we will learn how to scale
 an application, at which point you will be able to see multiple endpoints
 associated with the *Service*.
 
+--- 
 ## Exercise: Scaling and Self Healing
 
 ### Background: Deployments and ReplicaSets
@@ -605,7 +606,7 @@ instance. Feel free to do this using whatever method you like.
 
 >sWARNING: Don't forget to scale down back to 1 instance your `parksmap` component as otherwise you might experience some weird behavior in later labs. This is due to how the application has been coded and not to OpenShift itself.
 
-
+--- 
 ## Exposing Your Application to the Outside World
 
 In this lab, we're going to make our application visible to the end users, so they can access it.
@@ -700,3 +701,242 @@ This application is now available at the URL shown in the Developer Perspective.
 NOTE: At first time, the Browser will ask permission to get your position. This is needed by the Frontend app to center the world map to your location, if you don't allow it, it will just use a default location.
 
 ![Empty map](/images/parksmap-route-empty-map.png)
+
+---
+# Deploying Java Code
+
+In this section, we're going to deploy a backend service, developed in Java that will expose 2 main REST endpoints to the visualizer
+application (`parksmap` web component that was deployed in the previous labs).
+The application will query for national parks information (including its
+coordinates) that is stored in a MongoDB database.  This application will also
+provide an external access point, so that the API provided can be directly used
+by the end user.
+
+![Application architecture](/images/roadshow-app-architecture-nationalparks-1.png)
+
+### Background: Source-to-Image (S2I)
+
+In a previous lab, we learned how to deploy a pre-existing image
+image. Now we will expand on that by learning how OpenShift builds
+container images using source code from an existing repository.  This is accomplished using the Source-to-Image project.
+
+[Source-to-Image (S2I)](https://github.com/openshift/source-to-image) is a
+open source project sponsored by Red Hat that has the following goal:
+
+
+>Source-to-image (S2I) is a tool for building reproducible container images. S2I
+>produces ready-to-run images by injecting source code into a container image and
+>assembling a new container image which incorporates the builder image and built
+>source.   
+>The result is then ready to use with docker run. S2I supports
+>incremental builds which re-use previously downloaded dependencies, previously
+>built artifacts, etc.
+
+
+OpenShift is S2I-enabled and can use S2I as one of its build mechanisms (in
+addition to building container images from Dockerfiles, and "custom" builds).
+
+OpenShift runs the S2I process inside a special *Pod*, called a Build
+Pod, and thus builds are subject to quotas, limits, resource scheduling, and
+other aspects of OpenShift.
+
+A full discussion of S2I is beyond the scope of this class, but you can find
+more information about it either in the
+[OpenShift S2I documentation](https://{{DOCS_URL}}/openshift_images/using_images/using-s21-images.html)
+or on [GitHub](https://github.com/openshift/source-to-image). The only key concept you need to
+remember about S2I is that it's magic.
+
+## Exercise: Creating a Java application
+
+The backend service that we will be deploying as part of this exercise is
+called `nationalparks`.  This is a Java Spring Boot application that performs 2D
+geo-spatial queries against a MongoDB database to locate and return map
+coordinates of all National Parks in the world. That was just a fancy way of
+saying that we are going to deploy a webservice that returns a JSON list of
+places.
+
+### Add to Project
+Because the `nationalparks` component is a backend to serve data that our
+existing frontend (parksmap) will consume, we are going to build it inside the existing
+project that we have been working with. To illustrate how you can interact with OpenShift via the CLI or the web console, we will deploy the nationalparks component using the web console.
+
+### Using Application Code on an Embedded Git Server
+
+OpenShift can work with any accessible Git repository. This could be GitHub,
+GitLab, or any other server that speaks Git. You can even register webhooks in
+your Git server to initiate OpenShift builds triggered by any update to the
+application code!
+
+The repository that we are going to use is already cloned in the internal Gogs repository
+and located at the following URL:
+
+Your Gogs credentials are:
+
+```
+username: {{username}}
+password: {{GOGS_PASSWORD}}
+```
+
+[Gogs Repository](http://gogs-{{INFRA_PROJECT}}.{{cluster_subdomain}}/{{username}}/nationalparks.git)
+
+Later in the lab, we want you to make a code change and then rebuild your
+application. This is a fairly simple Spring framework Java application.
+
+### Build the Code on OpenShift
+
+Similar to how we used *+Add* before with an existing image, we
+can do the same for specifying a source code repository. Since for this lab you
+have your own git repository, let's use it with a simple Java S2I image.
+
+In the Developer Perspective, click *+Add* in the left navigation, go to the *Git Repository* section and then choose *From Git* option.
+
+![Add to Project](/images/nationalparks-show-add-options.png)
+
+The *Import from Git* workflow will guide you through the process of deploying your app based on a few selections.
+
+Enter the following for Git Repo URL:
+
+```
+http://gogs-{{INFRA_PROJECT}}.{{cluster_subdomain}}/{{username}}/nationalparks.git
+```
+
+In *Git Type* select *Other*.
+
+>NOTE: if you copied the Gogs URL correctly (check spaces etc) and you still get a warning like 'Git repository is not reachable' please ignore it at this time, since the UI may fail to ping the repo sometimes.
+
+Select *Java* as your Builder Image, and be sure to select version *openjdk-11-ubi8* to have OpenJDK 11.
+
+![Import from Git](/images/nationalparks-import-from-git-url-builder.png)
+
+NOTE: All of these runtimes shown are also made available via *Templates* and
+*ImageStreams*, which will be discussed in a later lab.
+
+Scroll down to the *General* section. Select:
+
+* *Application Name* : workshop
+* *Name* : nationalparks
+
+
+In *Resources* section, select *Deployment*.
+
+Expand the Labels section and add 3 labels:
+
+The name of the Application group:
+
+```
+app=workshop
+```
+
+Next the name of this deployment.
+
+```
+component=nationalparks
+```
+
+And finally, the role this component plays in the overall application.
+
+```
+role=backend
+```
+
+![Runtimes](/images/nationalparks-configure-service.png)
+
+Click *Create* to submit.
+
+To see the build logs, in Topology view, click the `nationalparks` entry, then click on *View Logs* in the *Builds* section of the *Resources* tab.
+
+![Nationalparks build](/images/nationalparks-java-new-java-build.png)
+
+
+This is a Java-based application that uses Maven as the build and dependency system.  For this reason, the initial build
+will take a few minutes as Maven downloads all of the dependencies needed for
+the application. You can see all of this happening in real time!
+
+From the command line, you can also see the *Builds*:
+
+```
+oc get builds
+```
+
+You'll see output like:
+
+```
+NAME              TYPE      FROM          STATUS     STARTED              DURATION
+nationalparks-1   Source    Git@b052ae6   Running    About a minute ago   1m2s
+```
+
+You can also view the build logs with the following command:
+
+```
+oc logs -f builds/nationalparks-1
+```
+
+After the build has completed and successfully:
+
+* The S2I process will push the resulting image to the internal OpenShift registry
+* The *Deployment* (D) will detect that the image has changed, and this
+  will cause a new deployment to happen.
+* A *ReplicaSet* (RS) will be spawned for this new deployment.
+* The RS will detect no *Pods* are running and will cause one to be deployed, as our default replica count is just 1.
+
+In the end, when issuing the `oc get pods` command, you will see that the build Pod
+has finished (exited) and that an application *Pod* is in a ready and running state:
+
+```
+NAME                    READY     STATUS      RESTARTS   AGE
+nationalparks-1-tkid3   1/1       Running     3          2m
+nationalparks-1-build   0/1       Completed   0          3m
+parksmap-57df75c46d-xltcs        1/1       Running     0          2h
+```
+
+If you look again at the web console, you will notice that, when you create the
+application this way, OpenShift also creates a *Route* for you. You can see the
+URL in the web console, or via the command line:
+
+```
+oc get routes
+```
+
+Where you should see something like the following:
+
+```
+NAME            HOST/PORT                                                   PATH      SERVICES        PORT       TERMINATION       WILDCARD
+nationalparks   nationalparks-{{ project_namespace  }}.{{cluster_subdomain}}             nationalparks   8080-tcp
+parksmap        parksmap-{{ project_namespace  }}.{{cluster_subdomain}}                  parksmap        8080-tcp        edge        none
+```
+
+In the above example, the URL is:
+
+```
+http://nationalparks-{{ project_namespace  }}.{{cluster_subdomain}}
+```
+
+Since this is a backend application, it doesn't actually have a web interface.
+However, it can still be used with a browser. All backends that work with the parksmap
+frontend are required to implement a `/ws/info/` endpoint. To test, visit this URL in your browser:
+
+[National Parks Info Page](http://nationalparks-{{project_namespace}}.{{cluster_subdomain}}/ws/info/)
+
+>WARNING: The trailing slash is *required*. If the Pod is Running and the application is not available, please wait a few seconds and retry since we haven't configured yet Health Checks for that.
+
+You will see a simple JSON string:
+
+```
+{"id":"nationalparks","displayName":"National Parks","center":{"latitude":"47.039304","longitude":"14.505178"},"zoom":4}
+```
+
+Earlier we said:
+
+```
+This is a Java Spring Boot application that performs 2D geo-spatial queries
+against a MongoDB database
+```
+
+But we don't have a database. Yet.
+
+
+
+
+
+
+
