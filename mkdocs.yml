@@ -32,7 +32,8 @@ markdown_extensions:
 
 nav:
   - Introduction: 'index.md'
-  - Articles: 
+  - Breakdown: 'breakdown.md'
+  - Sections: 
     - The Operator Meance: 'operatormenace.md'
     - The Automation Strike Back: 'automationstrikeback.md'
     - The Returns of Observability: 'returnoftheobservability.md'
