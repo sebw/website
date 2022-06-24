@@ -100,6 +100,7 @@ Get ready!
 
 --- 
 
+```
 openshift_api_url: https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443
 openshift_client_download_url: http://d3s3zqyaz8cp2d.cloudfront.net/pub/openshift-v4/clients/ocp/stable-4.8/openshift-client-linux.tar.gz
 openshift_console_url: https://console-openshift-console.apps.cluster-bz2cd.bz2cd.sandbox565.opentlc.com
@@ -164,7 +165,7 @@ users:
     password: openshift}
   user9: {login_command: 'oc login -u user9 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
     password: openshift}
-
+```
 Openshift Console: https://console-openshift-console.apps.cluster-bz2cd.bz2cd.sandbox565.opentlc.com
 Openshift API for command line 'oc' client: https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443
 Download oc client from http://d3s3zqyaz8cp2d.cloudfront.net/pub/openshift-v4/clients/ocp/stable-4.8/openshift-client-linux.tar.gz
