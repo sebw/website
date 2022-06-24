@@ -166,16 +166,16 @@ users:
   user9: {login_command: 'oc login -u user9 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
     password: openshift}
 ```
-Openshift Console: https://console-openshift-console.apps.cluster-bz2cd.bz2cd.sandbox565.opentlc.com
-Openshift API for command line 'oc' client: https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443
+Openshift Console: https://console-openshift-console.apps.cluster-bz2cd.bz2cd.sandbox565.opentlc.com  
+Openshift API for command line 'oc' client: https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443  
 Download oc client from http://d3s3zqyaz8cp2d.cloudfront.net/pub/openshift-v4/clients/ocp/stable-4.8/openshift-client-linux.tar.gz
 
-HTPasswd Authentication is enabled on this cluster.
-Users user1 .. user30 are created with password `openshift`
-User `opentlc-mgr` with password `r3dh4t1!` is cluster admin.
+HTPasswd Authentication is enabled on this cluster.  
+Users user1 .. user30 are created with password `openshift`  
+User `opentlc-mgr` with password `r3dh4t1!` is cluster admin.  
 Nexus password is admin123
 
 Getting Started workshop provisioned for 30 user(s)
 
-Lab access (Homeroom Route) URL to give to students:
+Lab access (Homeroom Route) URL to give to students:  
 https://homeroom-labs.apps.cluster-bz2cd.bz2cd.sandbox565.opentlc.com
