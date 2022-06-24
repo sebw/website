@@ -95,3 +95,86 @@ Select *Developer* to switch to the Developer perspective. Once the Developer pe
 
 We will be using a mix of command line tooling and the web console for the labs.
 Get ready!
+
+
+
+--- 
+
+openshift_api_url: https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443
+openshift_client_download_url: http://d3s3zqyaz8cp2d.cloudfront.net/pub/openshift-v4/clients/ocp/stable-4.8/openshift-client-linux.tar.gz
+openshift_console_url: https://console-openshift-console.apps.cluster-bz2cd.bz2cd.sandbox565.opentlc.com
+users:
+  user1: {login_command: 'oc login -u user1 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user10: {login_command: 'oc login -u user10 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user11: {login_command: 'oc login -u user11 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user12: {login_command: 'oc login -u user12 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user13: {login_command: 'oc login -u user13 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user14: {login_command: 'oc login -u user14 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user15: {login_command: 'oc login -u user15 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user16: {login_command: 'oc login -u user16 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user17: {login_command: 'oc login -u user17 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user18: {login_command: 'oc login -u user18 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user19: {login_command: 'oc login -u user19 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user2: {login_command: 'oc login -u user2 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user20: {login_command: 'oc login -u user20 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user21: {login_command: 'oc login -u user21 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user22: {login_command: 'oc login -u user22 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user23: {login_command: 'oc login -u user23 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user24: {login_command: 'oc login -u user24 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user25: {login_command: 'oc login -u user25 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user26: {login_command: 'oc login -u user26 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user27: {login_command: 'oc login -u user27 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user28: {login_command: 'oc login -u user28 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user29: {login_command: 'oc login -u user29 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user3: {login_command: 'oc login -u user3 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user30: {login_command: 'oc login -u user30 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user4: {login_command: 'oc login -u user4 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user5: {login_command: 'oc login -u user5 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user6: {login_command: 'oc login -u user6 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user7: {login_command: 'oc login -u user7 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user8: {login_command: 'oc login -u user8 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+  user9: {login_command: 'oc login -u user9 -p openshift https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443',
+    password: openshift}
+
+Openshift Console: https://console-openshift-console.apps.cluster-bz2cd.bz2cd.sandbox565.opentlc.com
+Openshift API for command line 'oc' client: https://api.cluster-bz2cd.bz2cd.sandbox565.opentlc.com:6443
+Download oc client from http://d3s3zqyaz8cp2d.cloudfront.net/pub/openshift-v4/clients/ocp/stable-4.8/openshift-client-linux.tar.gz
+
+HTPasswd Authentication is enabled on this cluster.
+Users user1 .. user30 are created with password `openshift`
+User `opentlc-mgr` with password `r3dh4t1!` is cluster admin.
+Nexus password is admin123
+
+Getting Started workshop provisioned for 30 user(s)
+
+Lab access (Homeroom Route) URL to give to students:
+https://homeroom-labs.apps.cluster-bz2cd.bz2cd.sandbox565.opentlc.com
