@@ -1,0 +1,1021 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.beezy.cloud/devsecopsawakens/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+    
+    
+      
+        <title>The DevSecOps Awakens - beezy.cloud</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#remote-access-to-your-application" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="beezy.cloud" class="md-header__button md-logo" aria-label="beezy.cloud" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            beezy.cloud
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The DevSecOps Awakens
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/beezy-cloud/website" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    beezy-cloud/website
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="beezy.cloud" class="md-nav__button md-logo" aria-label="beezy.cloud" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    beezy.cloud
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/beezy-cloud/website" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    beezy-cloud/website
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environment/" class="md-nav__link">
+        Environment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sections
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sections" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sections
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operatormenace/" class="md-nav__link">
+        The Operator Menace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../returnoftheobservability/" class="md-nav__link">
+        The Return of Observability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          The DevSecOps Awakens
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        The DevSecOps Awakens
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#remote-access-to-your-application" class="md-nav__link">
+    Remote Access to Your Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-remote-shell-session-to-a-container-using-the-cli" class="md-nav__link">
+    Exercise: Remote Shell Session to a Container Using the CLI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-remote-shell-session-to-a-container-using-the-web-console" class="md-nav__link">
+    Exercise: Remote Shell Session to a Container Using the Web Console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-execute-a-command-in-a-container" class="md-nav__link">
+    Exercise: Execute a Command in a Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-based-access-control" class="md-nav__link">
+    Role-Based Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-apply-rbac" class="md-nav__link">
+    Exercise: Apply RBAC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-redeploy-application" class="md-nav__link">
+    Exercise: Redeploy Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-exercise-grant-user-view-permissions" class="md-nav__link">
+    (Optional) Exercise: Grant User View Permissions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-network-isolation-between-containers" class="md-nav__link">
+    Implementing network isolation between containers
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementing network isolation between containers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-creating-projects-and-labeling-namespaces" class="md-nav__link">
+    Exercise: Creating Projects and Labeling Namespaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-creating-the-hello-world-microservice-and-client-pod-in-proj-c" class="md-nav__link">
+    Exercise: Creating the 'hello world' microservice and client pod in proj-c
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-creating-network-policies-for-network-isolation" class="md-nav__link">
+    Exercise: Creating Network Policies for network isolation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-creating-network-policies-for-selective-network-access" class="md-nav__link">
+    Exercise: Creating Network Policies for selective network access
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Creating Network Policies for selective network access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background_1" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automationstrikeback/" class="md-nav__link">
+        The Automation Strike Back
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#remote-access-to-your-application" class="md-nav__link">
+    Remote Access to Your Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-remote-shell-session-to-a-container-using-the-cli" class="md-nav__link">
+    Exercise: Remote Shell Session to a Container Using the CLI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-remote-shell-session-to-a-container-using-the-web-console" class="md-nav__link">
+    Exercise: Remote Shell Session to a Container Using the Web Console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-execute-a-command-in-a-container" class="md-nav__link">
+    Exercise: Execute a Command in a Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-based-access-control" class="md-nav__link">
+    Role-Based Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-apply-rbac" class="md-nav__link">
+    Exercise: Apply RBAC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-redeploy-application" class="md-nav__link">
+    Exercise: Redeploy Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-exercise-grant-user-view-permissions" class="md-nav__link">
+    (Optional) Exercise: Grant User View Permissions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-network-isolation-between-containers" class="md-nav__link">
+    Implementing network isolation between containers
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementing network isolation between containers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-creating-projects-and-labeling-namespaces" class="md-nav__link">
+    Exercise: Creating Projects and Labeling Namespaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-creating-the-hello-world-microservice-and-client-pod-in-proj-c" class="md-nav__link">
+    Exercise: Creating the 'hello world' microservice and client pod in proj-c
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-creating-network-policies-for-network-isolation" class="md-nav__link">
+    Exercise: Creating Network Policies for network isolation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-creating-network-policies-for-selective-network-access" class="md-nav__link">
+    Exercise: Creating Network Policies for selective network access
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Creating Network Policies for selective network access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background_1" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/beezy-cloud/website/edit/master/docs/devsecopsawakens.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+  <h1>The DevSecOps Awakens</h1>
+
+<h2 id="remote-access-to-your-application">Remote Access to Your Application</h2>
+<p>Containers are treated as immutable infrastructure and therefore it is generally
+not recommended to modify the content of a container through SSH or running custom
+commands inside the container. Nevertheless, in some use-cases, such as debugging
+an application, it might be beneficial to get into a container and inspect the
+application.</p>
+<h2 id="exercise-remote-shell-session-to-a-container-using-the-cli">Exercise: Remote Shell Session to a Container Using the CLI</h2>
+<p>OpenShift allows establishing remote shell sessions to a container without the
+need to run an SSH service inside each container. In order to establish an
+interactive session inside a container, you can use the <code>oc rsh</code> command. First
+get the list of available pods:</p>
+<div class="highlight"><pre><span></span><code>oc get pods
+</code></pre></div>
+<p>You should an output similar to the following:</p>
+<div class="highlight"><pre><span></span><code>NAME                        READY   STATUS    RESTARTS   AGE
+parksmap-65c4f8b676-fxcrq   1/1     Running   0          52m
+</code></pre></div>
+<p>Now you can establish a remote shell session into the pod by using the pod name:</p>
+<div class="highlight"><pre><span></span><code>oc rsh parksmap-65c4f8b676-fxcrq
+</code></pre></div>
+<p>You would see the following output:</p>
+<div class="highlight"><pre><span></span><code>sh-4.2$
+</code></pre></div>
+<blockquote>
+<p>The default shell used by <code>oc rsh</code> is <code>/bin/sh</code>. If the deployed container does
+not have <em>sh</em> installed and uses another shell, (e.g. <em>A Shell</em>) the shell command
+can be specified after the pod name in the issued command.</p>
+</blockquote>
+<p>Run the following command to list the files in the top folder:</p>
+<div class="highlight"><pre><span></span><code>ls /
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>anaconda-post.log  bin  dev  etc  home  lib  lib64  lostfound  media  mnt  opt  parksmap.jar  proc  root  run  sbin  srv  sys  tmp  usr  var
+</code></pre></div>
+<h2 id="exercise-remote-shell-session-to-a-container-using-the-web-console">Exercise: Remote Shell Session to a Container Using the Web Console</h2>
+<p>The OpenShift Web Console also provides a convenient way to access a terminal session on the container without having to use the CLI.</p>
+<p>In order to access a pod's terminal via the Web Console, go to the Topology view in the Developer Perspective, click the <code>parksmap</code> entry, and then click on the <em>Pod</em>. </p>
+<p><img alt="Pod in Dev Console" src="/images/parksmap-rsh-dev-console-pod.png" /></p>
+<p>Once you are viewing the information for the selected pod, click on the <em>Terminal</em> tab to open up a shell session.</p>
+<p><img alt="Pod List" src="/images/parksmap-rsh-applications-pods-terminal.png" /></p>
+<p>Go ahead and execute the same commands you did when using the CLI to see how the Web Console based terminal behaves.</p>
+<p>Before proceeding, close the connection to the pod.</p>
+<div class="highlight"><pre><span></span><code>exit
+</code></pre></div>
+<h2 id="exercise-execute-a-command-in-a-container">Exercise: Execute a Command in a Container</h2>
+<p>In addition to remote shell, it is also possible to run a command remotely in an
+already running container using the <code>oc exec</code> command. This does not require
+that a shell is installed, but only that the desired command is present and in
+the executable path.</p>
+<p>In order to show just the JAR file, run the following:</p>
+<div class="highlight"><pre><span></span><code>oc exec parksmap-2-mcjsw -- ls -l /parksmap.jar
+</code></pre></div>
+<p>You would see something like the following:</p>
+<div class="highlight"><pre><span></span><code>-rw-r--r--. 1 root root 39138901 Apr  1 16:54 /parksmap.jar
+</code></pre></div>
+<blockquote>
+<p>The <code>--</code> syntax in the <code>oc exec</code> command delineates where exec's options
+end and where the actual command to execute begins. Take a look at <code>oc exec
+--help</code> for more details.</p>
+</blockquote>
+<p>You can also specify the shell commands to run directly with the <em>oc rsh</em> command:</p>
+<div class="highlight"><pre><span></span><code>oc rsh parksmap-2-mcjsw whoami
+</code></pre></div>
+<p>You would see something like:</p>
+<div class="highlight"><pre><span></span><code>1000580000
+</code></pre></div>
+<blockquote>
+<p>It is important to understand that, for security reasons, OpenShift does not run containers as the user specified in the Dockerfile by default. In fact,
+when OpenShift launches a container its user is actually randomized.</p>
+<p>If you want or need to allow OpenShift users to deploy container images that do
+expect to run as root (or any specific user), a small configuration change is
+needed. You can learn more about the
+<a href="https://{{DOCS_URL}}/openshift_images/create-images.html#images-create-guide-general_create-images">container image guidelines</a>
+for OpenShift.</p>
+</blockquote>
+<h2 id="role-based-access-control">Role-Based Access Control</h2>
+<p>Almost every interaction with an OpenShift environment that you can think of
+requires going through the OpenShift's control plane API. All API interactions are both authenticated (AuthN - who are you?) and authorized (AuthZ - are you allowed to do what you are asking?).</p>
+<h2 id="exercise-apply-rbac">Exercise: Apply RBAC</h2>
+<p>In the log aggregation lab we saw that there was an
+error in reference to a <em>Service Account</em>.</p>
+<p>As OpenShift is a declarative platform, some actions will be performed by the platform and not by the end user (when he or she issues a command). These actions are performed using a <em>Service Account</em> which is a special type of <code>user</code> that the platform will use internally.</p>
+<p>OpenShift automatically creates a few special service accounts in every project.
+The <strong>default</strong> service account is the one taking the responsibility of running the pods, and OpenShift uses and injects this service account into
+every pod that is launched. By changing the permissions for that service
+account, we can do interesting things.</p>
+<p>You can view current permissions in the web console, go to the Topology view in the Developer Perspective, click the <code>parksmap</code> entry, go to the <em>Details</em> tab, and then click the <em>Namespace</em>. </p>
+<p><img alt="Namespace" src="/images/parksmap-permissions-namespace.png" /></p>
+<p>Then, click <em>Role Bindings</em>.</p>
+<p><img alt="Membership" src="/images/parksmap-permissions-membership.png" /></p>
+<p>== Exercise: Grant Service Account View Permissions
+The parksmap application wants to talk to the OpenShift API to learn about other
+<em>Pods</em>, <em>Services</em>, and resources within the <em>Project</em>. You'll soon learn why!</p>
+<div class="highlight"><pre><span></span><code>oc project {{ project_namespace }}
+</code></pre></div>
+<p>Then:</p>
+<div class="highlight"><pre><span></span><code>oc policy add-role-to-user view -z default
+</code></pre></div>
+<p>The <code>oc policy</code> command above is giving a defined <em>role</em> (<code>view</code>) to a user. But
+we are using a special flag, <code>-z</code>. What does this flag do? From the <code>-h</code> output:</p>
+<div class="highlight"><pre><span></span><code>-z, --serviceaccount=: service account in the current namespace to use as a user
+</code></pre></div>
+<p>The <code>-z</code> syntax is a special one that saves us from having to type out the
+entire string, which, in this case, is
+<code>system:serviceaccount:{{ project_namespace }}:default</code>. It's a nifty shortcut.</p>
+<blockquote>
+<p>The <code>-z</code> flag will only work for service accounts in the <em>current</em> project.
+If you're referring to a service account in a different project, use the <code>-n &lt;project&gt;</code>switch.</p>
+</blockquote>
+<p>Now that the <code>default</code> <em>Service Account</em> now has <strong>view</strong> access, so now it can query the API to see what resources are within the <em>Project</em>. This also has the added benefit of suppressing the error message! Although, in reality, we fixed the application.</p>
+<p>Another way you could have done the same is by using the OpenShift console. Once you're on the 
+<em>Workloads -&gt; Deployments</em> page, click on the <em>Namespace</em>, then <em>Role Bindings</em> and then the <em>Create Binding</em> button.</p>
+<p><img alt="Service account list" src="/images/parksmap-permissions-membership-serviceaccount-list.png" /></p>
+<p>Select <em>view</em> for the Role Binding Name <em>{{ project_namespace }}</em> for the Namespace, <em>view</em> for the Role Name, <em>Service Account</em> for the Subject, <em>{{ project_namespace }}</em> for the Subject Namespace, and <em>default</em> for the Subject Name.</p>
+<p><img alt="Service account edit" src="/images/parksmap-permissions-membership-serviceaccount-edit.png" /></p>
+<p>Once you're finished editing permissions, click on the <em>Create</em> button.</p>
+<p><img alt="Service account changed" src="/images/parksmap-permissions-membership-serviceaccount-done.png" /></p>
+<h2 id="exercise-redeploy-application">Exercise: Redeploy Application</h2>
+<p>One more step is required. We need to re-deploy the <code>parksmap</code> application because it's
+given up trying to query the API.</p>
+<div class="highlight"><pre><span></span><code>oc rollout restart deployment/parksmap
+</code></pre></div>
+<p>A new deployment is immediately started. Return to Topology view and click the <code>parksmap</code> entry again to watch it happen. You might not be fast enough! But it will be reflected in the <em>ReplicaSet</em> number.</p>
+<p><img alt="Application deployed" src="/images/parksmap-permissions-redeployed.png" /></p>
+<p>If you look at the logs for the application now, you should see no errors.  That's great.</p>
+<h2 id="optional-exercise-grant-user-view-permissions">(Optional) Exercise: Grant User View Permissions</h2>
+<p>If you create a project, you are that project's administrator. This means that
+you can grant access to other users, too. If you like, give your neighbor view
+access to your project using the following command:</p>
+<p>CAUTION: In the following command(s), replace <code>{{ project_namespace  }}</code> with the user name of the person to whom you want to grant access.</p>
+<div class="highlight"><pre><span></span><code>oc policy add-role-to-user view {{ project_namespace  }}
+</code></pre></div>
+<p>Have them go to the project view by clicking the <em>Projects</em> button and verify
+that they can see your project and its resources. This type of arrangement (view
+but not edit) might be ideal for a developer getting visibility into a
+production application's project.</p>
+<hr />
+<h2 id="implementing-network-isolation-between-containers">Implementing network isolation between containers</h2>
+<p>The goal of this lab is to learn about how to implement network isolation between running containers in Red Hat OpenShift Container Platform using Software Defined Networking and Network Policies. First, we will create a few projects (K8s namespaces) and examine default out of the box network policies provided in OpenShift. Then, we will use Network Policies to restrict which appications/projects can talk to each other by restricting the network layer to provide that network isolation between running containers with Software Defined Networking and Network Policies.</p>
+<h3 id="introduction">Introduction</h3>
+<p><a href="https://kubernetes.io/docs/concepts/services-networking/network-policies/">Kubernetes Network Policies</a> are an easy way for Project Administrators to define exactly what ingress/egress traffic is allowed to any pod, from any other pod, including traffic from pods located in other projects. By default, all Pods in a project are accessible from all other Pods and network endpoints. To isolate one or more Pods in a project, you can create NetworkPolicy objects in that project to indicate the allowed incoming connections. Project administrators can create and delete NetworkPolicy objects within their own project.</p>
+<p>If a Pod is matched by selectors in one or more NetworkPolicy objects, then it will accept only connections that are allowed by at least one of those NetworkPolicy objects. A Pod that is not selected by any NetworkPolicy objects is fully accessible.</p>
+<h3 id="background">Background</h3>
+<p>The objective of the exercise below is to create multiple projects and to test application communication between them. You will introduce Network policies that will block application communications across projects and then allow some.</p>
+<p>Project-c will have a hello-world application to which you will send requests.
+Projects-a, b and c will all have a client application. The client from project-c will always be able to communication with hello-world in project-c since they are in the same project. However, depending on the network policies in place at times you will be blocked from communicating from clients in projects a and b to the hello-world application in project c.</p>
+<h2 id="exercise-creating-projects-and-labeling-namespaces">Exercise: Creating Projects and Labeling Namespaces</h2>
+<p>As a cluster admin user, create 3 projects and label those namespaces.</p>
+<div class="highlight"><pre><span></span><code>[localhost ~]$ oc new-project proj-a --display-name=&quot;Project A&quot;
+[localhost ~]$ oc new-project proj-b --display-name=&quot;Project B&quot;
+[localhost ~]$ oc new-project proj-c --display-name=&quot;Project C&quot;
+</code></pre></div>
+<p>In order to create Network Policies and allow applications in one namespace to be accesssed by applications running in only certain other namespace, you have to label the namespaces so they can be identified in Network Policies (and this is why you have to be 'cluster-admin' level user):</p>
+<div class="highlight"><pre><span></span><code>oc label namespace proj-a name=proj-a
+oc label namespace proj-b name=proj-b
+oc label namespace proj-c name=proj-c
+</code></pre></div>
+<p>Now, let's look at the projects and labels we just created:</p>
+<div class="highlight"><pre><span></span><code>oc get projects proj-a proj-b proj-c --show-labels 
+</code></pre></div>
+<p><img alt="" src="/images/lab2.1-showlabels.png" /></p>
+<h2 id="exercise-creating-the-hello-world-microservice-and-client-pod-in-proj-c">Exercise: Creating the 'hello world' microservice and client pod in proj-c</h2>
+<p>Let's go into the project named <em>proj-c</em> and create 2 pods and a service.</p>
+<p><div class="highlight"><pre><span></span><code>[localhost ~]$ oc project proj-c
+[localhost ~]$ oc new-app quay.io/bkozdemb/hello --name=&quot;hello&quot;
+</code></pre></div>
+This will create a new app, which is a 'hello world' container based on image stored in quay.io that’s built on the RHEL base python image. It runs a simple web server that prints 'hello'.</p>
+<p>Next, let's confirm that the 2 pods are starting to run.</p>
+<div class="highlight"><pre><span></span><code>oc get pods
+</code></pre></div>
+<p><img alt="" src="/images/lab2.1-ocgetpods.png" /></p>
+<p>Now, let's create and run the client pod, which is a Fedora base image. When the image is running, notice the command that’s being run (tail -f /dev/null), which essentially prevents the pod from running and then immediately quitting. This client pod will be used to run a curl command later.</p>
+<div class="highlight"><pre><span></span><code>[localhost ~]$ oc run client --image=fedora --command -- tail -f /dev/null
+pod/client created
+</code></pre></div>
+<p>Let's confirm that our client pod and hello world pod are now running.</p>
+<div class="highlight"><pre><span></span><code>oc get pods
+</code></pre></div>
+<p><img alt="" src="/images/lab2.1-ocgetpods2.png" /></p>
+<p>Next, let's create similar client pods in other projects named <em>proj-a</em> and <em>proj-b</em>.</p>
+<div class="highlight"><pre><span></span><code>[localhost ~]$ oc project proj-b
+[localhost ~]$ oc run client  --image=fedora --command -- tail -f /dev/null
+[localhost ~]$ oc project proj-a
+[localhost ~]$ oc run client  --image=fedora --command -- tail -f /dev/null
+</code></pre></div>
+<p>Notice that the projects , <em>proj-a</em> and <em>proj-b</em> just have client pods running.</p>
+<div class="highlight"><pre><span></span><code>oc get pods -n proj-a
+oc get pods -n proj-b
+</code></pre></div>
+<p><img alt="" src="/images/lab2.1-ocgetpods3.png" /></p>
+<p>As we saw in the previous steps, <em>proj-c</em>, has both a client pod and the service (as a part of 'hello world' app).</p>
+<div class="highlight"><pre><span></span><code>oc get pods -n proj-c
+</code></pre></div>
+<p><img alt="" src="/images/lab2.1-ocgetpods4.png" /></p>
+<p>When the client pod is ready, display pod information with their labels.</p>
+<div class="highlight"><pre><span></span><code>oc get pods --show-labels
+</code></pre></div>
+<p><img alt="" src="/images/lab2.1-showlabels2.png" /></p>
+<p>Notice that the label that we’re using for Client pod is <em>run=client</em> which is created automatically by our previous 'oc run client' command.</p>
+<p>Next, from a different project, <em>proj-a</em>, connect to the Client container and try to access the <em>hello.proj-c</em> service in project, <em>proj-c</em>. The default network policy allows a client pod in <em>proj-a</em> to access the microservice in <em>proj-c</em>.</p>
+<p><div class="highlight"><pre><span></span><code>oc project proj-a
+POD=`oc get pods --selector=run=client --output=custom-columns=NAME:.metadata.name --no-headers`
+</code></pre></div>
+This command above simply assigns the pod name to the <em>POD</em> variable since some pods have random names by default so this command allows you to give a specific name to the pod.</p>
+<div class="highlight"><pre><span></span><code>echo $POD
+</code></pre></div>
+<p><img alt="" src="/images/lab2.1-echopod.png" /></p>
+<p>This returns <em>client</em>, which is the pod name.
+Next, go into the pod and curl the service in project, <em>proj-c</em>. Notice that this is allowed since it's open access by default.</p>
+<div class="highlight"><pre><span></span><code>oc rsh ${POD}
+#Inside the pod you have to execute:
+curl -v hello.proj-c:8080
+</code></pre></div>
+<p><img alt="" src="/images/lab2.1-curloutput1.png" /></p>
+<p>What you have seen so far is how Network Policies work by default in OpenShift. 
+Now let's take a look at the default Network Policies in the OpenShift web console. URL of web console can be found by running command:</p>
+<div class="highlight"><pre><span></span><code>[localhost ~]$ oc whoami --show-console
+https://console-openshift-console.apps.cluster-tx8sn.tx8sn.sandbox1590.opentlc.com
+</code></pre></div>
+<p>Log into the OpenShift web console, then go to Projects and find the project, <em>proj-c</em>. Navigate into <em>proj-c</em>, then select <em>Networking</em> -&gt; <em>Network Policies</em>.</p>
+<p><img alt="" src="/images/lab2.1.10-webconsole2.png" />
+<img alt="" src="/images/lab2.1.10-webconsole1.png" /></p>
+<p>Notice that (in earlier versions of OpenShift) those two Network Policies are created by default:</p>
+<ul>
+<li><em>allow-from-all-namespaces</em>: This is why we can hit services in the project, <em>proj-c</em> from other projects (such as projects, <em>proj-a</em> and <em>proj-b</em>).</li>
+<li><em>allow-from-ingress-namespace</em>: This allows ingress from the router (outside in through the router).</li>
+</ul>
+<blockquote>
+<p>NOTE: In the recent versions of OpenShift 4.x those default Network Policies are no longer present. As a result, if no Network Policies are defined, all traffic is allowed.</p>
+</blockquote>
+<h2 id="exercise-creating-network-policies-for-network-isolation">Exercise: Creating Network Policies for network isolation</h2>
+<p>In the OpenShift web console, choose project, <em>proj-c</em>, and go to <em>Networking</em> -&gt; <em>Network Policies</em>.</p>
+<p>Next, delete the 2 default Network Policies (<em>allow-from-all-namespaces</em> and <em>allow-from-ingress-namespace</em>) if you see them. Remember that if no Network Policies are defined, all traffic is allowed.</p>
+<p><img alt="" src="/images/lab2.2.2-deletenetworkpolicies.png" /></p>
+<p>Now, create a new Network Policy in project, <em>proj-c</em> that denies traffic from other namespaces. It should be
+the first example shown on the right in the Sample Network policies. Notice there are a lot of Sample Network Policies. Apply the first example <em>Limit access to the current namespace</em>. Click Try it. This creates the yaml. Next, press <em>create</em>.</p>
+<p><img alt="" src="/images/lab2.2-createnetworkpolicies1.png" />
+<img alt="" src="/images/lab2.2-createnetworkpolicies2-new.png" /></p>
+<p>Now, navigate into <em>Networking</em> -&gt; <em>Network Policies</em>. and notice that the <em>deny-other-namespaces</em> network policy is defined.</p>
+<p><img alt="" src="/images/lab2.2-denyothernamespaces.png" /></p>
+<p>Next, try to curl the hello world service in project, <em>proj-c</em> from the client in <em>proj-a</em>. Notice that the curl fails this time.</p>
+<div class="highlight"><pre><span></span><code>oc rsh ${POD}
+#Inside the pod you have to execute:
+curl -v hello.proj-c:8080
+</code></pre></div>
+<p><img alt="" src="/images/lab2.2-curlfail.png" /></p>
+<p>Remember to exit the pod with the <code>exit</code> command.</p>
+<p>Same kind of failure you would get if you try to access application running in <em>proj-c</em> from <em>proj-b</em> because the <em>deny-other-namespaces</em> Network Policy blocks traffic from ALL namespaces</p>
+<h2 id="exercise-creating-network-policies-for-selective-network-access">Exercise: Creating Network Policies for selective network access</h2>
+<p>Here you will create additional Network Policy that will allow access to pods running in <em>proj-c</em> project from those running in different projects, selected by their labels. In the previous lab you created a Network Policy that denies access to all pods in <em>proj-c</em> from other projects. <br />
+Now, let's create a Network Policy that is based on the sample "ALLOW traffic from all Pods in a particular namespace" policy. In the 'podSelector.matchLabels' section specify 'deployment:hello' to select the 'hello' labeled pods and in the 'namespaceSelector.matchLabels' section specify 'name:proj-a' to indicate that you will allow traffic from apps deployed in that namespace (recall that we previously labeled it with 'name:proj-a'). Press <em>Create</em> to create Network Policy</p>
+<p><img alt="" src="/images/lab2.3-allow-traffic-from-proj-a.png" /></p>
+<p>Now, navigate into <em>Networking</em> -&gt; <em>Network Policies</em>. and notice that the <em>web-allow-production</em> Network Policy is there:</p>
+<p><img alt="" src="/images/lab2.3-policies-list.png" /></p>
+<p>Next, again try to access the 'hello world' service in project <em>proj-c</em> from the Client running in <em>proj-a</em>. Notice that the curl succeeds this time because ingress traffic is explicitely allowed from <em>proj-a</em> to our 'hello world' pod by the <em>web-allow-production</em> Network Policy:</p>
+<div class="highlight"><pre><span></span><code>[localhost ~]$ oc rsh ${POD}
+sh-5.0# curl -v hello.proj-c:8080
+</code></pre></div>
+<p><img alt="" src="/images/lab2.3-curl-from-proj-a-ok.png" /></p>
+<p>Next, try to curl the 'hello world' service in project <em>proj-c</em> from the Client running in <em>proj-b</em>. Notice that the curl fails because the first Network Policy still blocks it and the second one is not applicable to pods running in <em>proj-b</em>:</p>
+<div class="highlight"><pre><span></span><code>[localhost ~]$ oc rsh ${POD}
+sh-5.0# curl -v hello.proj-c:8080
+</code></pre></div>
+<p><img alt="" src="/images/lab2.3-curl-from-proj-b-fails.png" /></p>
+<h3 id="background_1">Background</h3>
+<p>You have learned how to created multiple OpenShift projects/namespaces and test application communication between them. You also learned how to create declarative Network Policies that block application communications across projects and then allow application communications between selected applications running in specific namespaces. Network Policies when used propely are very powerful way to implement cloud native applications network security.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../returnoftheobservability/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The Return of Observability" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              The Return of Observability
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../automationstrikeback/" class="md-footer__link md-footer__link--next" aria-label="Next: The Automation Strike Back" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              The Automation Strike Back
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 beezy.cloud - Licensed under the Apache-2.0 License
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/beezy-cloud/website" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>

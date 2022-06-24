@@ -1,0 +1,1858 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.beezy.cloud/operatormenace/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+    
+    
+      
+        <title>The Operator Menace - beezy.cloud</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercise-deploying-your-first-image" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="beezy.cloud" class="md-header__button md-logo" aria-label="beezy.cloud" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            beezy.cloud
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Operator Menace
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/beezy-cloud/website" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    beezy-cloud/website
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="beezy.cloud" class="md-nav__button md-logo" aria-label="beezy.cloud" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    beezy.cloud
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/beezy-cloud/website" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    beezy-cloud/website
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environment/" class="md-nav__link">
+        Environment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sections
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sections" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sections
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          The Operator Menace
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        The Operator Menace
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-deploying-your-first-image" class="md-nav__link">
+    Exercise: Deploying your First Image
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Deploying your First Image">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-containers-and-pods" class="md-nav__link">
+    Background: Containers and Pods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-examining-the-pod" class="md-nav__link">
+    Exercise: Examining the Pod
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Examining the Pod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-customizing-the-image-lifecycle-behavior" class="md-nav__link">
+    Background: Customizing the Image Lifecycle Behavior
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-services" class="md-nav__link">
+    Background: Services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-scaling-and-self-healing" class="md-nav__link">
+    Exercise: Scaling and Self Healing
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Scaling and Self Healing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-deployments-and-replicasets" class="md-nav__link">
+    Background: Deployments and ReplicaSets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-exploring-deployment-related-objects" class="md-nav__link">
+    Exercise: Exploring Deployment-related Objects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-scaling-the-application" class="md-nav__link">
+    Exercise: Scaling the Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-self-healing" class="md-nav__link">
+    Application "Self Healing"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-scale-down" class="md-nav__link">
+    Exercise: Scale Down
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exposing-your-application-to-the-outside-world" class="md-nav__link">
+    Exposing Your Application to the Outside World
+  </a>
+  
+    <nav class="md-nav" aria-label="Exposing Your Application to the Outside World">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-routes" class="md-nav__link">
+    Background: Routes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-creating-a-route" class="md-nav__link">
+    Exercise: Creating a Route
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Creating a Route">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-route-using-the-web-console" class="md-nav__link">
+    Creating a route using the Web Console
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-route-using-the-command-line" class="md-nav__link">
+    Creating a route using the command line
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-java-code" class="md-nav__link">
+    Deploying Java Code
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploying Java Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-source-to-image-s2i" class="md-nav__link">
+    Background: Source-to-Image (S2I)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-creating-a-java-application" class="md-nav__link">
+    Exercise: Creating a Java application
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Creating a Java application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-to-project" class="md-nav__link">
+    Add to Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-application-code-on-an-embedded-git-server" class="md-nav__link">
+    Using Application Code on an Embedded Git Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-the-code-on-openshift" class="md-nav__link">
+    Build the Code on OpenShift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-database-mongodb" class="md-nav__link">
+    Adding a Database (MongoDB)
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding a Database (MongoDB)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-storage" class="md-nav__link">
+    Background: Storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-templates" class="md-nav__link">
+    Background: Templates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-instantiate-a-mongodb-template" class="md-nav__link">
+    Exercise: Instantiate a MongoDB Template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-deploy-mongodb" class="md-nav__link">
+    Exercise: Deploy MongoDB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-exploring-openshift-magic" class="md-nav__link">
+    Exercise: Exploring OpenShift Magic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-data-data-everywhere" class="md-nav__link">
+    Exercise: Data, Data, Everywhere
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-working-with-labels" class="md-nav__link">
+    Exercise: Working With Labels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../returnoftheobservability/" class="md-nav__link">
+        The Return of Observability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devsecopsawakens/" class="md-nav__link">
+        The DevSecOps Awakens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automationstrikeback/" class="md-nav__link">
+        The Automation Strike Back
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-deploying-your-first-image" class="md-nav__link">
+    Exercise: Deploying your First Image
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Deploying your First Image">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-containers-and-pods" class="md-nav__link">
+    Background: Containers and Pods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-examining-the-pod" class="md-nav__link">
+    Exercise: Examining the Pod
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Examining the Pod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-customizing-the-image-lifecycle-behavior" class="md-nav__link">
+    Background: Customizing the Image Lifecycle Behavior
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-services" class="md-nav__link">
+    Background: Services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-scaling-and-self-healing" class="md-nav__link">
+    Exercise: Scaling and Self Healing
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Scaling and Self Healing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-deployments-and-replicasets" class="md-nav__link">
+    Background: Deployments and ReplicaSets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-exploring-deployment-related-objects" class="md-nav__link">
+    Exercise: Exploring Deployment-related Objects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-scaling-the-application" class="md-nav__link">
+    Exercise: Scaling the Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-self-healing" class="md-nav__link">
+    Application "Self Healing"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-scale-down" class="md-nav__link">
+    Exercise: Scale Down
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exposing-your-application-to-the-outside-world" class="md-nav__link">
+    Exposing Your Application to the Outside World
+  </a>
+  
+    <nav class="md-nav" aria-label="Exposing Your Application to the Outside World">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-routes" class="md-nav__link">
+    Background: Routes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-creating-a-route" class="md-nav__link">
+    Exercise: Creating a Route
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Creating a Route">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-route-using-the-web-console" class="md-nav__link">
+    Creating a route using the Web Console
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-route-using-the-command-line" class="md-nav__link">
+    Creating a route using the command line
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-java-code" class="md-nav__link">
+    Deploying Java Code
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploying Java Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-source-to-image-s2i" class="md-nav__link">
+    Background: Source-to-Image (S2I)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-creating-a-java-application" class="md-nav__link">
+    Exercise: Creating a Java application
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Creating a Java application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-to-project" class="md-nav__link">
+    Add to Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-application-code-on-an-embedded-git-server" class="md-nav__link">
+    Using Application Code on an Embedded Git Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-the-code-on-openshift" class="md-nav__link">
+    Build the Code on OpenShift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-database-mongodb" class="md-nav__link">
+    Adding a Database (MongoDB)
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding a Database (MongoDB)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-storage" class="md-nav__link">
+    Background: Storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-templates" class="md-nav__link">
+    Background: Templates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-instantiate-a-mongodb-template" class="md-nav__link">
+    Exercise: Instantiate a MongoDB Template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-deploy-mongodb" class="md-nav__link">
+    Exercise: Deploy MongoDB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-exploring-openshift-magic" class="md-nav__link">
+    Exercise: Exploring OpenShift Magic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-data-data-everywhere" class="md-nav__link">
+    Exercise: Data, Data, Everywhere
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-working-with-labels" class="md-nav__link">
+    Exercise: Working With Labels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/beezy-cloud/website/edit/master/docs/operatormenace.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<p>In this lab, we're going to deploy the web component of the ParksMap application which is also called <code>parksmap</code> and uses OpenShift's service discovery mechanism to discover the backend services deployed and shows their data on the map.</p>
+<p><img alt="Application architecture" src="/images/roadshow-app-architecture-parksmap-1.png" /></p>
+<h2 id="exercise-deploying-your-first-image">Exercise: Deploying your First Image</h2>
+<p>Let's start by doing the simplest thing possible - get a plain old
+Docker-formatted image to run on OpenShift. This is incredibly simple to do.
+With OpenShift it can be done directly from the web console.</p>
+<p>Return to the <a href="http://console-openshift-console.{{cluster_subdomain}}/k8s/cluster/projects">Web Console</a>.</p>
+<p>If you're no longer on the Developer perspective, return there now. </p>
+<p>From the left menu, click <em>+Add</em>. You will see a screen where you have multiple options to deploy application to OpenShift. Click <em>Container Image</em> to open a dialog that will allow you to specify the information for the image you want to deploy.</p>
+<p><img alt="Add from Container Image" src="/images/parksmap-devconsole-container-image.png" /></p>
+<p>In the <em>Image Name</em> field, copy/paste the following into the box:</p>
+<div class="highlight"><pre><span></span><code>quay.io/openshiftroadshow/parksmap:latest
+</code></pre></div>
+<p>OpenShift will then go out to the container registry specified and interrogate the image.</p>
+<p>Your screen will end up looking something like this:</p>
+<p><img alt="Explore Project" src="/images/parksmap-image.png" /></p>
+<p>In <em>Runtime Icon</em> you can select the icon to use in OpenShift Topology View for the app. You can leave the default OpenShift icon, or select one from the list.</p>
+<p>NOTE: The purpose of this exercise is to deploy a microservice from an agnostic existing container image (Frontend, this was made with Spring Boot). The specific programming language path you have chosen is described and implemented in the next microservice chapter (Backend).</p>
+<p>Make sure to have the correct values in:</p>
+<ul>
+<li><em>Application Name</em> : workshop</li>
+<li><em>Name</em> : parksmap</li>
+</ul>
+<p>Ensure <em>Deployment</em> is selected from <em>Resource</em> section.</p>
+<p><em>Un-check</em> the checkbox next to <em>Create a route to the application</em>. For learning purposes, we will create a <em>Route</em> for the application later in the workshop.</p>
+<p>At the bottom of the page, click <em>Labels</em> in the Advanced Options section and add some labels to better identify this deployment later. Labels will help us identify and filter components in the web console and in the command line.</p>
+<p>We will add 3 labels. After you enter the name=value pair for each label, press <em>tab</em> or de-focus with mouse before typing the next. First the name to be given to the application.</p>
+<div class="highlight"><pre><span></span><code>app=workshop
+</code></pre></div>
+<p>Next the name of this deployment.</p>
+<div class="highlight"><pre><span></span><code>component=parksmap
+</code></pre></div>
+<p>And finally, the role this component plays in the overall application.</p>
+<div class="highlight"><pre><span></span><code>role=frontend
+</code></pre></div>
+<p><img alt="Deploy image" src="/images/parksmap-image-options.png" /></p>
+<p>Next, click the blue <em>Create</em> button. You will be directed to the <em>Topology</em> page, where you should see the visualization for the <code>parksmap</code> deployment config in the <code>workshop</code> application.</p>
+<p><img alt="Topology View with Parksmap" src="/images/parksmap-dc-topology.png" /></p>
+<p>These few steps are the only ones you need to run to get a
+container image deployed on OpenShift. This should work with any
+container image that follows best practices, such as defining an EXPOSE
+port, not needing to run specifically as the <em>root user</em> or other user name, and a single non-exiting CMD to execute on start.</p>
+<blockquote>
+<p>NOTE: Providing appropriate labels is desired when deploying complex applications for organization purposes. <br />
+OpenShift uses a label <em>app</em> to define and group components together in the Overview page. OpenShift will create this label with some default if the user doesn't provide it explicitly.</p>
+</blockquote>
+<h3 id="background-containers-and-pods">Background: Containers and Pods</h3>
+<p>Before we start digging in, we need to understand how containers and <em>Pods</em> are
+related. We will not be covering the background on these technologies in this lab but if you have questions please inform the instructor. Instead, we will dive right in and start using them.</p>
+<p>In OpenShift, the smallest deployable unit is a <em>Pod</em>. A <em>Pod</em> is a group of one or more OCI containers deployed together and guaranteed to be on the same host.
+From the official OpenShift documentation:</p>
+<blockquote>
+<p>Each <em>Pod</em> has its own IP address, therefore owning its entire port space, and
+containers within pods can share storage. <em>Pods</em> can be "tagged" with one or
+more labels, which are then used to select and manage groups of <em>pods</em> in a
+single operation.</p>
+</blockquote>
+<p><em>Pods</em> can contain multiple OCI containers. The general idea is for a <em>Pod</em> to
+contain a "main process" and any auxiliary services you want to run along with that process. Examples of containers you might put in a <em>Pod</em> are, an Apache HTTPD
+server, a log analyzer, and a file service to help manage uploaded files.</p>
+<h2 id="exercise-examining-the-pod">Exercise: Examining the Pod</h2>
+<p>If you click on the <code>parksmap</code> entry in the Topology view, you will see some information about that deployment config. The <em>Resources</em> tab may be displayed by default. If so, click on the <em>Details</em> tab. </p>
+<p><img alt="Details Tab image" src="/images/switchtoresources.png" /></p>
+<p>On that panel, you will see that there is a single <em>Pod</em> that was created by your actions.</p>
+<p><img alt="Pod overview" src="/images/parksmap-overview.png" /></p>
+<p>You can also get a list of all the <em>Pods</em> created within your <em>Project</em>, by navigating to <em>Workloads -&gt; Pods</em> in the Administrator perspective of the web console.</p>
+<p><img alt="Pod list" src="/images/parksmap-podlist.png" /></p>
+<p>This <em>Pod</em> contains a single container, which
+happens to be the <code>parksmap</code> application - a simple Spring Boot/Java application.</p>
+<p>You can also examine <em>Pods</em> from the command line:</p>
+<div class="highlight"><pre><span></span><code>oc get pods
+</code></pre></div>
+<p>You should see output that looks similar to:</p>
+<div class="highlight"><pre><span></span><code>NAME                READY   STATUS      RESTARTS   AGE
+parksmap-65c4f8b676-k5gkk    1/1     Running     0          20s
+</code></pre></div>
+<p>The above output lists all of the <em>Pods</em> in the current <em>Project</em>, including the
+<em>Pod</em> name, state, restarts, and uptime. Once you have a <em>Pod</em>'s name, you can
+get more information about the <em>Pod</em> using the <code>oc get</code> command.  To make the
+output readable, I suggest changing the output type to <em>YAML</em> using the
+following syntax:</p>
+<blockquote>
+<p>NOTE: Make sure you use the correct <em>Pod</em> name from your output.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>oc get pod parksmap-65c4f8b676-k5gkk -o yaml
+</code></pre></div>
+<p>You should see something like the following output (which has been truncated due
+to space considerations of this workshop manual):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">k8s.v1.cni.cncf.io/network-status</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span><span class="w"></span>
+<span class="w">      </span><span class="no">[{</span><span class="w"></span>
+<span class="w">          </span><span class="no">&quot;name&quot;: &quot;&quot;,</span><span class="w"></span>
+<span class="w">          </span><span class="no">&quot;interface&quot;: &quot;eth0&quot;,</span><span class="w"></span>
+<span class="w">          </span><span class="no">&quot;ips&quot;: [</span><span class="w"></span>
+<span class="w">              </span><span class="no">&quot;10.131.0.93&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="no">],</span><span class="w"></span>
+<span class="w">          </span><span class="no">&quot;default&quot;: true,</span><span class="w"></span>
+<span class="w">          </span><span class="no">&quot;dns&quot;: {}</span><span class="w"></span>
+<span class="w">      </span><span class="no">}]</span><span class="w"></span>
+<span class="w">    </span><span class="nt">k8s.v1.cni.cncf.io/networks-status</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span><span class="w"></span>
+<span class="w">      </span><span class="no">[{</span><span class="w"></span>
+<span class="w">          </span><span class="no">&quot;name&quot;: &quot;&quot;,</span><span class="w"></span>
+<span class="w">          </span><span class="no">&quot;interface&quot;: &quot;eth0&quot;,</span><span class="w"></span>
+<span class="w">          </span><span class="no">&quot;ips&quot;: [</span><span class="w"></span>
+<span class="w">              </span><span class="no">&quot;10.131.0.93&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="no">],</span><span class="w"></span>
+<span class="w">          </span><span class="no">&quot;default&quot;: true,</span><span class="w"></span>
+<span class="w">          </span><span class="no">&quot;dns&quot;: {}</span><span class="w"></span>
+<span class="w">      </span><span class="no">}]</span><span class="w"></span>
+<span class="w">    </span><span class="nt">openshift.io/generated-by</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenShiftWebConsole</span><span class="w"></span>
+<span class="w">    </span><span class="nt">openshift.io/scc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restricted</span><span class="w"></span>
+<span class="w">  </span><span class="nt">creationTimestamp</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2021-01-05T17:00:32Z&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">generateName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parksmap-65c4f8b676-</span><span class="w"></span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parksmap</span><span class="w"></span>
+<span class="w">    </span><span class="nt">component</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parksmap</span><span class="w"></span>
+<span class="w">    </span><span class="nt">deploymentconfig</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parksmap</span><span class="w"></span>
+<span class="w">    </span><span class="nt">pod-template-hash</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">65c4f8b676</span><span class="w"></span>
+<span class="w">    </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frontend</span><span class="w"></span>
+</code></pre></div>
+<p>The web interface also shows a lot of the same information on the <em>Pod</em> details
+page. If you click on the name of the <em>Pod</em>, you will
+find the details page. You can also get there by clicking on the <code>parksmap</code> deployment config on the <em>Topology</em> page, selecting <em>Resources</em>, and then clicking the <em>Pod</em> name.</p>
+<p><img alt="Parksmap Resources" src="/images/parksmap-dc-resources.png" /></p>
+<p>From here you can see configuration, metrics, environment variables, logs, events and get a Terminal shell on the running pod.</p>
+<p><img alt="Pod Details" src="/images/parksmap-pod.png" /></p>
+<p><img alt="Pod Events" src="/images/parksmap-pod-events.png" /></p>
+<p>Getting the <code>parksmap</code> image running may take a little while to complete. Each
+OpenShift node that is asked to run the image has to pull (download) it, if the
+node does not already have it cached locally. You can check on the status of the
+image download and deployment in the <em>Pod</em> details page, or from the command
+line with the <code>oc get pods</code> command that you used before.</p>
+<p>The default view in the <em>Developer</em> console is <em>Graph View</em>. You can switch between <em>Graph</em> and <em>List</em> views by using the toggle in the top right of the console.</p>
+<p><img alt="List View Toggle" src="/images/nationalparks-listview.png" /></p>
+<p><img alt="Topology View Toggle" src="/images/nationalparks-graphview.png" /></p>
+<h3 id="background-customizing-the-image-lifecycle-behavior">Background: Customizing the Image Lifecycle Behavior</h3>
+<p>Whenever OpenShift asks the node's CRI (Container Runtime Interface) runtime (Docker daemon or CRI-O) to run an image, the runtime will check to make sure it has the right "version" of the image to run.
+If it doesn't, it will pull it from the specified registry.</p>
+<p>There are a number of ways to customize this behavior. They are documented in
+https://{{DOCS_URL}}/applications/creating_applications/creating-applications-using-cli.html#applications-create-using-cli-image_creating-applications-using-cli[specifying an image]
+as well as
+https://{{DOCS_URL}}/openshift_images/managing_images/image-pull-policy.html[image pull policy].</p>
+<h3 id="background-services">Background: Services</h3>
+<p><em>Services</em> provide a convenient abstraction layer inside OpenShift to find a
+group of similar <em>Pods</em>. They also act as an internal proxy/load balancer between
+those <em>Pods</em> and anything else that needs to access them from inside the
+OpenShift environment. For example, if you needed more <code>parksmap</code> instances to
+handle the load, you could spin up more <em>Pods</em>. OpenShift automatically maps
+them as endpoints to the <em>Service</em>, and the incoming requests would not notice
+anything different except that the <em>Service</em> was now doing a better job handling
+the requests.</p>
+<p>When you asked OpenShift to run the image, it automatically created a <em>Service</em>
+for you. Remember that services are an internal construct. They are not
+available to the "outside world", or anything that is outside the OpenShift
+environment. That's okay, as you will learn later.</p>
+<p>The way that a <em>Service</em> maps to a set of <em>Pods</em> is via a system of <em>Labels</em> and
+<em>Selectors</em>. <em>Services</em> are assigned a fixed IP address and many ports and
+protocols can be mapped.</p>
+<p>There is a lot more information about
+https://{{DOCS_URL}}/architecture/understanding-development.html#understanding-kubernetes-pods[Services],
+including the YAML format to make one by hand, in the official documentation.</p>
+<p>Now that we understand the basics of what a <em>Service</em> is, let's take a look at
+the <em>Service</em> that was created for the image that we just deployed. In order to
+view the <em>Services</em> defined in your <em>Project</em>, enter in the following command:</p>
+<div class="highlight"><pre><span></span><code>oc get services
+</code></pre></div>
+<p>You should see output similar to the following:</p>
+<div class="highlight"><pre><span></span><code>NAME       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+parksmap   ClusterIP   172.30.22.209  &lt;none&gt;        8080/TCP   3h
+</code></pre></div>
+<p>In the above output, we can see that we have a <em>Service</em> named <code>parksmap</code> with an
+IP/Port combination of 172.30.22.209/8080TCP. Your IP address may be different, as
+each <em>Service</em> receives a unique IP address upon creation. <em>Service</em> IPs are
+fixed and never change for the life of the <em>Service</em>.</p>
+<p>In the Developer perspective from the <em>Topology</em> view, service information is available by clicking the <code>parksmap</code> deployment config, then <em>Resources</em>, and then you should see the <code>parksmap</code> entry in the <em>Services</em> section.</p>
+<p><img alt="Services list" src="/images/parksmap-serviceslist.png" /></p>
+<p>You can also get more detailed information about a <em>Service</em> by using the
+following command to display the data in YAML:</p>
+<div class="highlight"><pre><span></span><code>oc get service parksmap -o yaml
+</code></pre></div>
+<p>You should see output similar to the following:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">openshift.io/generated-by</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenShiftWebConsole</span><span class="w"></span>
+<span class="w">  </span><span class="nt">creationTimestamp</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2020-09-30T14:10:12Z&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">workshop</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.kubernetes.io/component</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parksmap</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.kubernetes.io/instance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parksmap</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.kubernetes.io/part-of</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">workshop</span><span class="w"></span>
+<span class="w">    </span><span class="nt">component</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parksmap</span><span class="w"></span>
+<span class="w">    </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frontend</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parksmap</span><span class="w"></span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user1</span><span class="w"></span>
+<span class="w">  </span><span class="nt">resourceVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1062269&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">selfLink</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/api/v1/namespaces/user1/services/parksmap</span><span class="w"></span>
+<span class="w">  </span><span class="nt">uid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">e1ff69c8-cb2f-11e9-82a1-0267eec7e1a0</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">clusterIP</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">172.30.22.209</span><span class="w"></span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080-tcp</span><span class="w"></span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
+<span class="w">    </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span><span class="w"></span>
+<span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parksmap</span><span class="w"></span>
+<span class="w">    </span><span class="nt">deploymentconfig</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parksmap</span><span class="w"></span>
+<span class="w">  </span><span class="nt">sessionAffinity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span><span class="w"></span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterIP</span><span class="w"></span>
+<span class="nt">status</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">loadBalancer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+</code></pre></div>
+<p>Take note of the <code>selector</code> stanza. Remember it.</p>
+<p>Alternatively, you can use the web console to view information about the <em>Service</em> by clicking on it from the previous screen.</p>
+<p><img alt="Service" src="/images/parksmap-service.png" /></p>
+<p>It is also of interest to view the YAML of the <em>Pod</em> to understand how OpenShift
+wires components together. For example, run the following command to get the
+name of your <code>parksmap</code> <em>Pod</em>:</p>
+<div class="highlight"><pre><span></span><code>oc get pods
+</code></pre></div>
+<p>You should see output similar to the following:</p>
+<div class="highlight"><pre><span></span><code>NAME                        READY   STATUS    RESTARTS   AGE
+parksmap-65c4f8b676-k5gkk   1/1     Running   0          5m12s
+</code></pre></div>
+<p>Now you can view the detailed data for your <em>Pod</em> with the following command:</p>
+<div class="highlight"><pre><span></span><code>oc get pod parksmap-65c4f8b676-k5gkk -o yaml
+</code></pre></div>
+<p>Under the <code>metadata</code> section you should see the following:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parksmap</span><span class="w"></span>
+<span class="w">    </span><span class="nt">deploymentconfig</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parksmap</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>The <em>Service</em> has <code>selector</code> stanza that refers to <code>deploymentconfig=parksmap</code>.</li>
+<li>The <em>Pod</em> has multiple <em>Labels</em>:
+<strong> <code>app=parksmap</code>
+</strong> <code>deploymentconfig=parksmap</code></li>
+</ul>
+<p><em>Labels</em> are just key/value pairs. Any <em>Pod</em> in this <em>Project</em> that has a <em>Label</em> that
+matches the <em>Selector</em> will be associated with the <em>Service</em>. To see this in
+action, issue the following command:</p>
+<div class="highlight"><pre><span></span><code>oc describe service parksmap
+</code></pre></div>
+<p>You should see something like the following output:</p>
+<div class="highlight"><pre><span></span><code>Name:              parksmap
+Namespace:         user1
+Labels:            app=workshop
+                   app.kubernetes.io/component=parksmap
+                   app.kubernetes.io/instance=parksmap
+                   app.kubernetes.io/part-of=workshop
+                   component=parksmap
+                   role=frontend
+Annotations:       openshift.io/generated-by: OpenShiftWebConsole
+Selector:          app=parksmap,deploymentconfig=parksmap
+Type:              ClusterIP
+IP:                172.30.22.209
+Port:              8080-tcp  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         10.128.2.90:8080
+Session Affinity:  None
+Events:            &lt;none&gt;
+</code></pre></div>
+<p>You may be wondering why only one endpoint is listed. That is because there is
+only one <em>Pod</em> currently running.  In the next lab, we will learn how to scale
+an application, at which point you will be able to see multiple endpoints
+associated with the <em>Service</em>.</p>
+<hr />
+<h2 id="exercise-scaling-and-self-healing">Exercise: Scaling and Self Healing</h2>
+<h3 id="background-deployments-and-replicasets">Background: Deployments and ReplicaSets</h3>
+<p>While <em>Services</em> provide routing and load balancing for <em>Pods</em>, which may go in and
+out of existence, <em>ReplicaSet</em> (RS) and <em>ReplicationController</em> (RC) are used to specify and then
+ensure the desired number of <em>Pods</em> (replicas) are in existence. For example, if
+you always want your application server to be scaled to 3 <em>Pods</em> (instances), a
+<em>ReplicaSet</em> is needed. Without an RS, any <em>Pods</em> that are killed or
+somehow die/exit are not automatically restarted. <em>ReplicaSets</em> and <em>ReplicationController</em> are how OpenShift "self heals" and while <em>Deployments</em> control <em>ReplicaSets</em>, <em>ReplicationController</em> here are controlled by <em>DeploymentConfigs</em>.</p>
+<p>From the https://{{DOCS_URL}}/applications/deployments/what-deployments-are.html[deployments documentation]:</p>
+<blockquote>
+<p>Similar to a replication controller, a ReplicaSet is a native Kubernetes API object that ensures a specified number of pod replicas are running at any given time. The difference between a replica set and a replication controller is that a replica set supports set-based selector requirements whereas a replication controller only supports equality-based selector requirements.</p>
+</blockquote>
+<p>In Kubernetes, a <em>Deployment</em> (D) defines how something should be deployed. In almost all cases, you will end up using the <em>Pod</em>, <em>Service</em>,
+<em>ReplicaSet</em> and <em>Deployment</em> resources together. And, in
+almost all of those cases, OpenShift will create all of them for you.</p>
+<p>There are some edge cases where you might want some <em>Pods</em> and an <em>RS</em> without a <em>D</em>
+or a <em>Service</em>, and others, so feel free to ask us about them after the labs.</p>
+<h2 id="exercise-exploring-deployment-related-objects">Exercise: Exploring Deployment-related Objects</h2>
+<p>Now that we know the background of what a <em>ReplicaSet</em> and
+<em>Deployment</em> are, we can explore how they work and are related. Take a
+look at the <em>Deployment</em> (D) that was created for you when you told
+OpenShift to stand up the <code>parksmap</code> image:</p>
+<div class="highlight"><pre><span></span><code>oc get deployment
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+parksmap   1/1     1            1           20m
+</code></pre></div>
+<p>To get more details, we can look into the <em>ReplicaSet</em> (<em>RS</em>).</p>
+<p>Take a look at the <em>ReplicaSet</em> (RS) that was created for you when
+you told OpenShift to stand up the <code>parksmap</code> image:</p>
+<div class="highlight"><pre><span></span><code>oc get rs
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>NAME                  DESIRED   CURRENT   READY   AGE
+parksmap-65c4f8b676   1         1         1       21m
+</code></pre></div>
+<p>This lets us know that, right now, we expect one <em>Pod</em> to be deployed
+(<code>Desired</code>), and we have one <em>Pod</em> actually deployed (<code>Current</code>). By changing
+the desired number, we can tell OpenShift that we want more or less <em>Pods</em>.</p>
+<p>OpenShift's <em>HorizontalPodAutoscaler</em> effectively monitors the CPU usage of a
+set of instances and then manipulates the RCs accordingly.</p>
+<p>You can learn more about the CPU-based
+<a href="https://{{DOCS_URL}}/nodes/pods/nodes-pods-autoscaling.html#nodes-pods-autoscaling-about_nodes-pods-autoscaling">Horizontal Pod Autoscaler here</a></p>
+<h2 id="exercise-scaling-the-application">Exercise: Scaling the Application</h2>
+<p>Let's scale our parksmap "application" up to 2 instances. We can do this with
+the <code>scale</code> command. You could also do this by incrementing the Desired Count in the OpenShift web console. Pick one of these methods; it's your choice.</p>
+<div class="highlight"><pre><span></span><code>oc scale --replicas=2 deployment/parksmap
+</code></pre></div>
+<p>You can also scale up to two pods in the <em>Developer Perspective</em>. From the Topology view, first click the <code>parksmap</code> deployment config and select the <em>Details</em> tab:</p>
+<p><img alt="Details" src="/images/parksmap-details.png" /></p>
+<p>Next, click the <em>^</em> icon next to the Pod visualization to scale up to 2 pods.</p>
+<p><img alt="Scaling up" src="/images/parksmap-scaleup.png" /></p>
+<p>To verify that we changed the number of replicas, issue the following command:</p>
+<div class="highlight"><pre><span></span><code>oc get rs
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>NAME                  DESIRED   CURRENT   READY   AGE
+parksmap-65c4f8b676   2         2         2       23m
+</code></pre></div>
+<p>You can see that we now have 2 replicas. Let's verify the number of pods with
+the <code>oc get pods</code> command:</p>
+<div class="highlight"><pre><span></span><code>oc get pods
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>NAME                        READY   STATUS    RESTARTS   AGE
+parksmap-65c4f8b676-fxcrq   1/1     Running   0          92s
+parksmap-65c4f8b676-k5gkk   1/1     Running   0          24m
+</code></pre></div>
+<p>And lastly, let's verify that the <em>Service</em> that we learned about in the
+previous lab accurately reflects two endpoints:</p>
+<div class="highlight"><pre><span></span><code>oc describe svc parksmap
+</code></pre></div>
+<p>You will see something like the following output:</p>
+<div class="highlight"><pre><span></span><code>Name:              parksmap
+Namespace:         user1
+Labels:            app=workshop
+                   app.kubernetes.io/component=parksmap
+                   app.kubernetes.io/instance=parksmap
+                   app.kubernetes.io/part-of=workshop
+                   app.openshift.io/runtime-version=latest
+                   component=parksmap
+                   role=frontend
+Annotations:       openshift.io/generated-by: OpenShiftWebConsole
+Selector:          app=parksmap,deploymentconfig=parksmap
+Type:              ClusterIP
+IP:                172.30.136.210
+Port:              8080-tcp  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         10.128.2.138:8080,10.131.0.93:8080
+Session Affinity:  None
+Events:            &lt;none&gt;
+</code></pre></div>
+<p>Another way to look at a <em>Service</em>'s endpoints is with the following:</p>
+<div class="highlight"><pre><span></span><code>oc get endpoints parksmap
+</code></pre></div>
+<p>And you will see something like the following:</p>
+<div class="highlight"><pre><span></span><code>NAME       ENDPOINTS                           AGE
+parksmap   10.128.2.90:8080,10.131.0.40:8080   45m
+</code></pre></div>
+<p>Your IP addresses will likely be different, as each pod receives a unique IP
+within the OpenShift environment. The endpoint list is a quick way to see how
+many pods are behind a service.</p>
+<p>You can also see that both <em>Pods</em> are running in the Developer Perspective:</p>
+<p><img alt="Scaled" src="/images/parksmap-scaled.png" /></p>
+<p>Overall, that's how simple it is to scale an application (<em>Pods</em> in a
+<em>Service</em>). Application scaling can happen extremely quickly because OpenShift
+is just launching new instances of an existing image, especially if that image
+is already cached on the node.</p>
+<h2 id="application-self-healing">Application "Self Healing"</h2>
+<p>Because OpenShift's <em>RSs</em> are constantly monitoring to see that the desired number
+of <em>Pods</em> actually are running, you might also expect that OpenShift will "fix" the
+situation if it is ever not right. You would be correct!</p>
+<p>Since we have two <em>Pods</em> running right now, let's see what happens if we
+"accidentally" kill one. Run the <code>oc get pods</code> command again, and choose a <em>Pod</em>
+name. Then, do the following:</p>
+<div class="highlight"><pre><span></span><code>oc delete pod parksmap-65c4f8b676-k5gkk &amp;&amp; oc get pods
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>pod &quot;parksmap-65c4f8b676-k5gkk&quot; deleted
+NAME                        READY   STATUS    RESTARTS   AGE
+parksmap-65c4f8b676-bjz5g   1/1     Running   0          13s
+parksmap-65c4f8b676-fxcrq   1/1     Running   0          4m48s
+</code></pre></div>
+<p>Did you notice anything? One container has been deleted, and there's a new container already being created. </p>
+<p>Also, the names of the <em>Pods</em> are slightly changed.
+That's because OpenShift almost immediately detected that the current state (1
+<em>Pod</em>) didn't match the desired state (2 <em>Pods</em>), and it fixed it by scheduling
+another <em>Pod</em>.</p>
+<p>Additionally, OpenShift provides rudimentary capabilities around checking the
+liveness and/or readiness of application instances. If the basic checks are
+insufficient, OpenShift also allows you to run a command inside the container in
+order to perform the check. That command could be a complicated script that uses
+any installed language.</p>
+<p>Based on these health checks, if OpenShift decided that our <code>parksmap</code>
+application instance wasn't alive, it would kill the instance and then restart
+it, always ensuring that the desired number of replicas was in place.</p>
+<p>More information on probing applications is available in the
+<a href="https://{{DOCS_URL}}/applications/application-health.html">Application
+Health</a> section of the documentation and later in this guide.</p>
+<h2 id="exercise-scale-down">Exercise: Scale Down</h2>
+<p>Before we continue, go ahead and scale your application down to a single
+instance. Feel free to do this using whatever method you like.</p>
+<blockquote>
+<p>sWARNING: Don't forget to scale down back to 1 instance your <code>parksmap</code> component as otherwise you might experience some weird behavior in later labs. This is due to how the application has been coded and not to OpenShift itself.</p>
+</blockquote>
+<hr />
+<h2 id="exposing-your-application-to-the-outside-world">Exposing Your Application to the Outside World</h2>
+<p>In this lab, we're going to make our application visible to the end users, so they can access it.</p>
+<p><img alt="Application architecture" src="/images/roadshow-app-architecture-parksmap-2.png" /></p>
+<h3 id="background-routes">Background: Routes</h3>
+<p>While <em>Services</em> provide internal abstraction and load balancing within an
+OpenShift environment, sometimes clients (users, systems, devices, etc.)
+<strong>outside</strong> of OpenShift need to access an application. The way that external
+clients are able to access applications running in OpenShift is through the
+OpenShift routing layer. And the data object behind that is a <em>Route</em>.</p>
+<p>The default OpenShift router (HAProxy) uses the HTTP header of the incoming
+request to determine where to proxy the connection. You can optionally define
+security, such as TLS, for the <em>Route</em>. If you want your <em>Services</em>, and, by
+extension, your <em>Pods</em>, to be accessible from the outside world, you need to
+create a <em>Route</em>.</p>
+<h2 id="exercise-creating-a-route">Exercise: Creating a Route</h2>
+<p>You may remember that when we deployed the <code>parksmap</code> application, we un-checked the checkbox to create a <em>Route</em>. Normally it would have been created for us automatically. Fortunately, creating a <em>Route</em> is a pretty straight-forward process. You simply <code>expose</code> the <em>Service</em> via the command line or via the <em>Administrator Perspective</em>.</p>
+<h3 id="creating-a-route-using-the-web-console">Creating a route using the Web Console</h3>
+<p>In the <em>Administrator Perspective</em> click <em>Networking -&gt; Routes</em> and then the <em>Create Route</em> button. </p>
+<p>Insert <em>parksmap</em> in <em>Name</em> field.</p>
+<p>From <em>Service</em> field, select <em>parksmap</em>. For <em>Target Port</em>, select <em>8080</em>.</p>
+<p>In <em>Security</em> section, check <em>Secure route</em>. Select <em>Edge</em> from <em>TLS Termination</em> list.</p>
+<p>Leave all other fields blank and click <em>Create</em>:</p>
+<p><img alt="Create Route1" src="/images/parksmap-route-create-1.png" />
+<img alt="Create Route2" src="/images/parksmap-route-create-2.png" /></p>
+<p>When creating a <em>Route</em>, some other options can be provided, like the hostname and path for the <em>Route</em> or the other TLS configurations.</p>
+<h3 id="creating-a-route-using-the-command-line">Creating a route using the command line</h3>
+<p>When using the command line, we can first verify that we don't already have any existing <em>Routes</em>:</p>
+<div class="highlight"><pre><span></span><code>oc get routes
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>No resources found.
+</code></pre></div>
+<p>Now we need to get the <em>Service</em> name to expose:</p>
+<div class="highlight"><pre><span></span><code>oc get services
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>NAME       CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
+parksmap   172.30.169.213   &lt;none&gt;        8080/TCP   5h
+</code></pre></div>
+<p>Once we know the <em>Service</em> name, creating a <em>Route</em> is a simple one-command task:</p>
+<div class="highlight"><pre><span></span><code>oc create route edge parksmap --service=parksmap
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>route.route.openshift.io/parksmap exposed
+</code></pre></div>
+<p>Verify the <em>Route</em> was created with the following command:</p>
+<div class="highlight"><pre><span></span><code>oc get route
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>NAME       HOST/PORT                            PATH      SERVICES   PORT       TERMINATION   WILDCARD
+parksmap   parksmap-{{project_namespace}}.{{cluster_subdomain}}             parksmap   8080-tcp   edge          None
+</code></pre></div>
+<p>You can also verify the <em>Route</em> in the <em>Developer Perspective</em> under the <em>Resources</em> tab for your <code>parksmap</code> deployment configuration. Also note that there is a decorator icon on the <code>parksmap</code> visualization now. If you click that, it will open the URL for your <em>Route</em> in a browser.</p>
+<p><img alt="Route created" src="/images/parksmap-route-created.png" /></p>
+<p>This application is now available at the URL shown in the Developer Perspective. Click the link and you will see it.</p>
+<p>NOTE: At first time, the Browser will ask permission to get your position. This is needed by the Frontend app to center the world map to your location, if you don't allow it, it will just use a default location.</p>
+<p><img alt="Empty map" src="/images/parksmap-route-empty-map.png" /></p>
+<hr />
+<h1 id="deploying-java-code">Deploying Java Code</h1>
+<p>In this section, we're going to deploy a backend service, developed in Java that will expose 2 main REST endpoints to the visualizer
+application (<code>parksmap</code> web component that was deployed in the previous labs).
+The application will query for national parks information (including its
+coordinates) that is stored in a MongoDB database.  This application will also
+provide an external access point, so that the API provided can be directly used
+by the end user.</p>
+<p><img alt="Application architecture" src="/images/roadshow-app-architecture-nationalparks-1.png" /></p>
+<h3 id="background-source-to-image-s2i">Background: Source-to-Image (S2I)</h3>
+<p>In a previous lab, we learned how to deploy a pre-existing image
+image. Now we will expand on that by learning how OpenShift builds
+container images using source code from an existing repository.  This is accomplished using the Source-to-Image project.</p>
+<p><a href="https://github.com/openshift/source-to-image">Source-to-Image (S2I)</a> is a
+open source project sponsored by Red Hat that has the following goal:</p>
+<blockquote>
+<p>Source-to-image (S2I) is a tool for building reproducible container images. S2I
+produces ready-to-run images by injecting source code into a container image and
+assembling a new container image which incorporates the builder image and built
+source. <br />
+The result is then ready to use with docker run. S2I supports
+incremental builds which re-use previously downloaded dependencies, previously
+built artifacts, etc.</p>
+</blockquote>
+<p>OpenShift is S2I-enabled and can use S2I as one of its build mechanisms (in
+addition to building container images from Dockerfiles, and "custom" builds).</p>
+<p>OpenShift runs the S2I process inside a special <em>Pod</em>, called a Build
+Pod, and thus builds are subject to quotas, limits, resource scheduling, and
+other aspects of OpenShift.</p>
+<p>A full discussion of S2I is beyond the scope of this class, but you can find
+more information about it either in the
+<a href="https://{{DOCS_URL}}/openshift_images/using_images/using-s21-images.html">OpenShift S2I documentation</a>
+or on <a href="https://github.com/openshift/source-to-image">GitHub</a>. The only key concept you need to
+remember about S2I is that it's magic.</p>
+<h2 id="exercise-creating-a-java-application">Exercise: Creating a Java application</h2>
+<p>The backend service that we will be deploying as part of this exercise is
+called <code>nationalparks</code>.  This is a Java Spring Boot application that performs 2D
+geo-spatial queries against a MongoDB database to locate and return map
+coordinates of all National Parks in the world. That was just a fancy way of
+saying that we are going to deploy a webservice that returns a JSON list of
+places.</p>
+<h3 id="add-to-project">Add to Project</h3>
+<p>Because the <code>nationalparks</code> component is a backend to serve data that our
+existing frontend (parksmap) will consume, we are going to build it inside the existing
+project that we have been working with. To illustrate how you can interact with OpenShift via the CLI or the web console, we will deploy the nationalparks component using the web console.</p>
+<h3 id="using-application-code-on-an-embedded-git-server">Using Application Code on an Embedded Git Server</h3>
+<p>OpenShift can work with any accessible Git repository. This could be GitHub,
+GitLab, or any other server that speaks Git. You can even register webhooks in
+your Git server to initiate OpenShift builds triggered by any update to the
+application code!</p>
+<p>The repository that we are going to use is already cloned in the internal Gogs repository
+and located at the following URL:</p>
+<p>Your Gogs credentials are:</p>
+<div class="highlight"><pre><span></span><code>username: {{username}}
+password: {{GOGS_PASSWORD}}
+</code></pre></div>
+<p><a href="http://gogs-{{INFRA_PROJECT}}.{{cluster_subdomain}}/{{username}}/nationalparks.git">Gogs Repository</a></p>
+<p>Later in the lab, we want you to make a code change and then rebuild your
+application. This is a fairly simple Spring framework Java application.</p>
+<h3 id="build-the-code-on-openshift">Build the Code on OpenShift</h3>
+<p>Similar to how we used <em>+Add</em> before with an existing image, we
+can do the same for specifying a source code repository. Since for this lab you
+have your own git repository, let's use it with a simple Java S2I image.</p>
+<p>In the Developer Perspective, click <em>+Add</em> in the left navigation, go to the <em>Git Repository</em> section and then choose <em>From Git</em> option.</p>
+<p><img alt="Add to Project" src="/images/nationalparks-show-add-options.png" /></p>
+<p>The <em>Import from Git</em> workflow will guide you through the process of deploying your app based on a few selections.</p>
+<p>Enter the following for Git Repo URL:</p>
+<div class="highlight"><pre><span></span><code>http://gogs-{{INFRA_PROJECT}}.{{cluster_subdomain}}/{{username}}/nationalparks.git
+</code></pre></div>
+<p>In <em>Git Type</em> select <em>Other</em>.</p>
+<blockquote>
+<p>NOTE: if you copied the Gogs URL correctly (check spaces etc) and you still get a warning like 'Git repository is not reachable' please ignore it at this time, since the UI may fail to ping the repo sometimes.</p>
+</blockquote>
+<p>Select <em>Java</em> as your Builder Image, and be sure to select version <em>openjdk-11-ubi8</em> to have OpenJDK 11.</p>
+<p><img alt="Import from Git" src="/images/nationalparks-import-from-git-url-builder.png" /></p>
+<p>NOTE: All of these runtimes shown are also made available via <em>Templates</em> and
+<em>ImageStreams</em>, which will be discussed in a later lab.</p>
+<p>Scroll down to the <em>General</em> section. Select:</p>
+<ul>
+<li><em>Application Name</em> : workshop</li>
+<li><em>Name</em> : nationalparks</li>
+</ul>
+<p>In <em>Resources</em> section, select <em>Deployment</em>.</p>
+<p>Expand the Labels section and add 3 labels:</p>
+<p>The name of the Application group:</p>
+<div class="highlight"><pre><span></span><code>app=workshop
+</code></pre></div>
+<p>Next the name of this deployment.</p>
+<div class="highlight"><pre><span></span><code>component=nationalparks
+</code></pre></div>
+<p>And finally, the role this component plays in the overall application.</p>
+<div class="highlight"><pre><span></span><code>role=backend
+</code></pre></div>
+<p><img alt="Runtimes" src="/images/nationalparks-configure-service.png" /></p>
+<p>Click <em>Create</em> to submit.</p>
+<p>To see the build logs, in Topology view, click the <code>nationalparks</code> entry, then click on <em>View Logs</em> in the <em>Builds</em> section of the <em>Resources</em> tab.</p>
+<p><img alt="Nationalparks build" src="/images/nationalparks-java-new-java-build.png" /></p>
+<p>This is a Java-based application that uses Maven as the build and dependency system.  For this reason, the initial build
+will take a few minutes as Maven downloads all of the dependencies needed for
+the application. You can see all of this happening in real time!</p>
+<p>From the command line, you can also see the <em>Builds</em>:</p>
+<div class="highlight"><pre><span></span><code>oc get builds
+</code></pre></div>
+<p>You'll see output like:</p>
+<div class="highlight"><pre><span></span><code>NAME              TYPE      FROM          STATUS     STARTED              DURATION
+nationalparks-1   Source    Git@b052ae6   Running    About a minute ago   1m2s
+</code></pre></div>
+<p>You can also view the build logs with the following command:</p>
+<div class="highlight"><pre><span></span><code>oc logs -f builds/nationalparks-1
+</code></pre></div>
+<p>After the build has completed and successfully:</p>
+<ul>
+<li>The S2I process will push the resulting image to the internal OpenShift registry</li>
+<li>The <em>Deployment</em> (D) will detect that the image has changed, and this
+  will cause a new deployment to happen.</li>
+<li>A <em>ReplicaSet</em> (RS) will be spawned for this new deployment.</li>
+<li>The RS will detect no <em>Pods</em> are running and will cause one to be deployed, as our default replica count is just 1.</li>
+</ul>
+<p>In the end, when issuing the <code>oc get pods</code> command, you will see that the build Pod
+has finished (exited) and that an application <em>Pod</em> is in a ready and running state:</p>
+<div class="highlight"><pre><span></span><code>NAME                    READY     STATUS      RESTARTS   AGE
+nationalparks-1-tkid3   1/1       Running     3          2m
+nationalparks-1-build   0/1       Completed   0          3m
+parksmap-57df75c46d-xltcs        1/1       Running     0          2h
+</code></pre></div>
+<p>If you look again at the web console, you will notice that, when you create the
+application this way, OpenShift also creates a <em>Route</em> for you. You can see the
+URL in the web console, or via the command line:</p>
+<div class="highlight"><pre><span></span><code>oc get routes
+</code></pre></div>
+<p>Where you should see something like the following:</p>
+<div class="highlight"><pre><span></span><code>NAME            HOST/PORT                                                   PATH      SERVICES        PORT       TERMINATION       WILDCARD
+nationalparks   nationalparks-{{ project_namespace  }}.{{cluster_subdomain}}             nationalparks   8080-tcp
+parksmap        parksmap-{{ project_namespace  }}.{{cluster_subdomain}}                  parksmap        8080-tcp        edge        none
+</code></pre></div>
+<p>In the above example, the URL is:</p>
+<div class="highlight"><pre><span></span><code>http://nationalparks-{{ project_namespace  }}.{{cluster_subdomain}}
+</code></pre></div>
+<p>Since this is a backend application, it doesn't actually have a web interface.
+However, it can still be used with a browser. All backends that work with the parksmap
+frontend are required to implement a <code>/ws/info/</code> endpoint. To test, visit this URL in your browser:</p>
+<p><a href="http://nationalparks-{{project_namespace}}.{{cluster_subdomain}}/ws/info/">National Parks Info Page</a></p>
+<blockquote>
+<p>WARNING: The trailing slash is <em>required</em>. If the Pod is Running and the application is not available, please wait a few seconds and retry since we haven't configured yet Health Checks for that.</p>
+</blockquote>
+<p>You will see a simple JSON string:</p>
+<div class="highlight"><pre><span></span><code>{&quot;id&quot;:&quot;nationalparks&quot;,&quot;displayName&quot;:&quot;National Parks&quot;,&quot;center&quot;:{&quot;latitude&quot;:&quot;47.039304&quot;,&quot;longitude&quot;:&quot;14.505178&quot;},&quot;zoom&quot;:4}
+</code></pre></div>
+<p>Earlier we said:</p>
+<div class="highlight"><pre><span></span><code>This is a Java Spring Boot application that performs 2D geo-spatial queries
+against a MongoDB database
+</code></pre></div>
+<p>But we don't have a database. Yet.</p>
+<hr />
+<h2 id="adding-a-database-mongodb">Adding a Database (MongoDB)</h2>
+<p>In this section we will deploy and connect a MongoDB database where the
+<code>nationalparks</code> application will store location information.</p>
+<p>Finally, we will mark the <code>nationalparks</code> application as a backend for the map
+visualization tool, so that it can be dynamically discovered by the <code>parksmap</code>
+component using the OpenShift discovery mechanism and the map will be displayed
+automatically.</p>
+<p><img alt="Application architecture,800,align=&quot;center&quot;" src="/images/roadshow-app-architecture-nationalparks-2.png" /></p>
+<h3 id="background-storage">Background: Storage</h3>
+<p>Most useful applications are "stateful" or "dynamic" in some way, and this is
+usually achieved with a database or other data storage. In this lab we are
+going to add MongoDB to our <code>nationalparks</code> application and then rewire it to
+talk to the database using environment variables via a secret.</p>
+<p>We are going to use the MongoDB image that is included with OpenShift.</p>
+<p>By default, this will use <em>EmptyDir</em> for data storage, which means if the <em>Pod</em>
+disappears the data does as well. In a real application you would use
+OpenShift's persistent storage mechanism to attach real-world storage (NFS,
+Ceph, EBS, iSCSI, etc) to the <em>Pods</em> to give them a persistent place to store their data.</p>
+<h3 id="background-templates">Background: Templates</h3>
+<p>In this module we will create MongoDB from a <em>Template</em>, which is useful mechanism in OpenShift to define parameters for certain values, such as
+DB username or password, that can be automatically generated by OpenShift at
+processing time.</p>
+<p>Administrators can load <em>Templates</em> into OpenShift and make them available to
+all users. Users can create <em>Templates</em> and load them
+into their own <em>Projects</em> for other users (with access) to share and use.</p>
+<p>The great thing about <em>Templates</em> is that they can speed up the deployment
+workflow for application development by providing a "recipe" of sorts that can
+be deployed with a single command.  Not only that, they can be loaded into
+OpenShift from an external URL, which will allow you to keep your templates in a
+version control system. </p>
+<h2 id="exercise-instantiate-a-mongodb-template">Exercise: Instantiate a MongoDB Template</h2>
+<p>In this step we will create a MongoDB template inside our project, so that is only visible to our user and we can access it from Developer Perspective to create a MongoDB instance.</p>
+<div class="highlight"><pre><span></span><code>oc create -f https://raw.githubusercontent.com/openshift-labs/starter-guides/ocp-4.8/mongodb-template.yaml -n {{project_namespace}}
+</code></pre></div>
+<p>What just happened? What did you just <code>create</code>? The item that we passed to the <code>create</code>
+command is a <em>Template</em>. <code>create</code> simply makes the template available in
+your <em>Project</em>.</p>
+<h2 id="exercise-deploy-mongodb">Exercise: Deploy MongoDB</h2>
+<p>As you've seen so far, the web console makes it very easy to deploy things onto
+OpenShift. When we deploy the database, we pass in some values for configuration.
+These values are used to set the username, password, and name of
+the database.</p>
+<p>The database image is built in a way that it will automatically configure itself
+using the supplied information (assuming there is no data already present in the
+persistent storage!). The image will ensure that:</p>
+<ul>
+<li>A database exists with the specified name</li>
+<li>A user exists with the specified name</li>
+<li>The user can access the specified database with the specified password</li>
+</ul>
+<p>In the Developer Perspective in your <code>{{ project_namespace }}</code> project,
+click <em>+Add</em> and go to <em>Developer Catalog</em> section and click to <em>Database</em>. 
+In the Databases view, you can click <em>Mongo</em> to filter for just MongoDB.</p>
+<p><img alt="Data Stores" src="/images/nationalparks-databases-catalog-databases.png" /></p>
+<p>Alternatively, you could type <code>mongodb</code> in the search box. Once you have drilled down to see MongoDB, find the <em>MongoDB (Ephemeral)</em> template and select it.  You will notice that there are multiple
+MongoDB templates available.  We do not need a database with persistent storage, so the ephemeral Mongo
+template is what you should choose.  Go ahead and select the ephemeral template and click the <em>Instantiate Template</em> button.</p>
+<p>When we performed the application build, there was no template. Rather, we selected the
+builder image directly and OpenShift presented only the standard build workflow.
+Now we are using a template - a preconfigured set of resources that includes
+parameters that can be customized. In our case, the parameters we are concerned
+with are -- user, password, database, and
+admin password.</p>
+<p><img alt="MongoDB Deploy" src="/images/nationalparks-databases-catalog-databases-mongodb-config.png" /></p>
+<blockquote>
+<p>CAUTION: Make sure you name your database service name <em>mongodb-nationalparks</em></p>
+</blockquote>
+<p>You can see that some of the fields say <em>"generated if empty"</em>. This is a
+feature of <em>Templates</em> in OpenShift. For
+now, be sure to use the following values in their respective fields:</p>
+<ul>
+<li><code>Database Service Name</code> : <code>mongodb-nationalparks</code></li>
+<li><code>MongoDB Connection Username</code> : <code>mongodb</code></li>
+<li><code>MongoDB Connection Password</code> : <code>mongodb</code></li>
+<li><code>MongoDB Database Name</code>: <code>mongodb</code></li>
+<li><code>MongoDB Admin Password</code> : <code>mongodb</code></li>
+</ul>
+<blockquote>
+<p>CAUTION: Make sure to have configured the <em><code>MongoDB Database Name</code></em> parameter with the appropriate value as by default it will already have a value of <code>sampledb</code>.</p>
+</blockquote>
+<p>Once you have entered in the above information, click on <em>Create</em> to go to the next step which will allow us to add a binding.</p>
+<p>From left-side menu, click to <em>Secrets</em>. Secrets are a mechanism to hold sensitive information such as passwords, configuration files, private source repository credentials, and so on. Secrets decouple sensitive content from the pods. </p>
+<p><img alt="List Secrets" src="/images/nationalparks-databases-list-secrets.png" /></p>
+<p>Click the secret that begins <em>mongodb-ephemeral-parameters</em> like the one listed in the image above, that we will use for <em>Parameters</em>. The secret can be used in other components, such as the <code>nationalparks</code> backend, to authenticate to the database.</p>
+<p>Now that the connection and authentication information stored in a secret in our project, we need to add it to the <code>nationalparks</code> backend. Click the <em>Add Secret to Workload</em> button.</p>
+<p><img alt="National Parks Binding" src="/images/nationalparks-databases-binding-view-secret.png" /></p>
+<p>Select the <code>nationalparks</code> workload and click <em>Save</em>.</p>
+<p><img alt="Add binding to application" src="/images/nationalparks-databases-binding-add-binding-to-nationalparks.png" /></p>
+<p>This change in configuration will trigger a new deployment of the <code>nationalparks</code> application with the environment variables properly injected.</p>
+<p>Back in the <em>Topology</em> view, if required, whilst holding the shift key down, click and drag the <code>mongodb-nationalparks</code> component into the light gray area that denotes the <code>workshop</code> application, so that all three components are contained in it. (Note: Shift click and drag - this is how you move components in and out of the application boundary. You may also edit the <em>part-of</em> label for the component, for example all the components in this <em>workshop</em> application have this label <em>app.kubernetes.io/part-of=workshop</em> ).</p>
+<p><img alt="Add mongodb to the workshop app" src="/images/nationalparks-databases-add-mongodb-to-workshop-app.png" /></p>
+<p>Next, let's fix the labels assigned to the <code>mongodb-nationalparks</code> deployment. Currently, we cannot set labels when using the database template from the catalog, so we will fix these labels manually. </p>
+<p>Like before, we'll add 3 labels:</p>
+<p>The name of the Application group:</p>
+<div class="highlight"><pre><span></span><code>app=workshop
+</code></pre></div>
+<p>Next the name of this deployment.</p>
+<div class="highlight"><pre><span></span><code>component=nationalparks
+</code></pre></div>
+<p>And finally, the role this component plays in the overall application.</p>
+<div class="highlight"><pre><span></span><code>role=database
+</code></pre></div>
+<p>Execute the following command:</p>
+<div class="highlight"><pre><span></span><code>oc label dc/mongodb-nationalparks svc/mongodb-nationalparks app=workshop component=nationalparks role=database --overwrite
+</code></pre></div>
+<h2 id="exercise-exploring-openshift-magic">Exercise: Exploring OpenShift Magic</h2>
+<p>As soon as we attached the Secret to the <em>Deployment</em>, some
+magic happened. OpenShift decided that this was a significant enough change to
+warrant updating the internal version number of the <em>ReplicaSet</em>. You
+can verify this by looking at the output of <code>oc get rs</code>:</p>
+<div class="highlight"><pre><span></span><code>NAME                       DESIRED   CURRENT   READY   AGE
+nationalparks-58bd4758fc   0         0         0       4m58s
+nationalparks-7445576cd9   0         0         0       6m42s
+nationalparks-789c6bc4f4   1         1         1       41s
+parksmap-57df75c46d        1         1         1       8m24s
+parksmap-65c4f8b676        0         0         0       18m
+</code></pre></div>
+<p>We see that the DESIRED and CURRENT number of instances for the current deployment. The desired and current number of the other instances are 0.
+This means that OpenShift has gracefully torn down our "old" application and
+stood up a "new" instance.</p>
+<h2 id="exercise-data-data-everywhere">Exercise: Data, Data, Everywhere</h2>
+<p>Now that we have a database deployed, we can again visit the <code>nationalparks</code> web
+service to query for data:</p>
+<div class="highlight"><pre><span></span><code>http://nationalparks-{{ project_namespace }}.{{cluster_subdomain}}/ws/data/all
+</code></pre></div>
+<p>And the result?</p>
+<div class="highlight"><pre><span></span><code>[]
+</code></pre></div>
+<p>Where's the data? Think about the process you went through. You deployed the
+application and then deployed the database. Nothing actually loaded anything
+<em>INTO</em> the database, though.</p>
+<p>The application provides an endpoint to do just that:</p>
+<div class="highlight"><pre><span></span><code>http://nationalparks-{{ project_namespace }}.{{cluster_subdomain}}/ws/data/load
+</code></pre></div>
+<p>And the result?</p>
+<div class="highlight"><pre><span></span><code>Items inserted in database: 2893
+</code></pre></div>
+<p>If you then go back to <code>/ws/data/all</code> you will see tons of JSON data now.
+That's great. Our parks map should finally work!</p>
+<blockquote>
+<p>NOTE: There are some errors reported with browsers like Firefox 54 that don't properly parse the resulting JSON. It's
+a browser problem, and the application is working properly.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>https://parksmap-{{ project_namespace }}.{{cluster_subdomain}}
+</code></pre></div>
+<p>Hmm... There's just one thing. The main map <strong>STILL</strong> isn't displaying the parks.
+That's because the front end parks map only tries to talk to services that have
+the right <em>Label</em>.</p>
+<blockquote>
+<p>You are probably wondering how the database connection magically started
+working? When deploying applications to OpenShift, it is always best to use
+environment variables, secrets, or configMaps to define connections to dependent systems.  This allows
+for application portability across different environments.  The source file that
+performs the connection as well as creates the database schema can be viewed
+here:</p>
+<div class="highlight"><pre><span></span><code>http://www.github.com/openshift-roadshow/nationalparks/blob/master/src/main/java/com/openshift/evg/roadshow/parks/db/MongoDBConnection.java#L44-l48
+</code></pre></div>
+<p>In short summary: By referring to bindings to connect to services
+(like databases), it can be trivial to promote applications throughout different
+lifecycle environments on OpenShift without having to modify application code.</p>
+</blockquote>
+<h2 id="exercise-working-with-labels">Exercise: Working With Labels</h2>
+<p>We explored how a <em>Label</em> is just a key=value pair earlier when looking at
+<em>Services</em> and <em>Routes</em> and <em>Selectors</em>. In general, a <em>Label</em> is simply an
+arbitrary key=value pair. It could be anything.</p>
+<ul>
+<li><code>pizza=pepperoni</code></li>
+<li><code>pet=dog</code></li>
+<li><code>openshift=awesome</code></li>
+</ul>
+<p>In the case of the parks map, the application is actually querying the OpenShift
+API and asking about the <em>Routes</em> and <em>Services</em> in the project. If any of them have a
+<em>Label</em> that is <code>type=parksmap-backend</code>, the application knows to interrogate
+the endpoints to look for map data.
+You can see the code that does this
+<a href="https://github.com/openshift-roadshow/parksmap-web/blob/master/src/main/java/com/openshift/evg/roadshow/rest/RouteWatcher.java">here</a>.</p>
+<p>Fortunately, the command line provides a convenient way for us to manipulate
+labels. <code>describe</code> the <code>nationalparks</code> service:</p>
+<div class="highlight"><pre><span></span><code>oc describe route nationalparks
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Name:                   nationalparks
+Namespace:              {{ project_namespace }}
+Created:                2 hours ago
+Labels:                 app=workshop
+                        app.kubernetes.io/component=nationalparks
+                        app.kubernetes.io/instance=nationalparks
+                        app.kubernetes.io/name=nodejs
+                        app.kubernetes.io/part-of=workshop
+                        app.openshift.io/runtime=nodejs
+                        app.openshift.io/runtime-version=10
+                        component=nationalparks
+                        role=backend  
+Annotations:            openshift.io/host.generated=true                          
+Requested Host:         nationalparks-{{ project_namespace }}.{{cluster_subdomain}}
+                        exposed on router router 2 hours ago
+Path:                   &lt;none&gt;
+TLS Termination:        &lt;none&gt;
+Insecure Policy:        &lt;none&gt;
+Endpoint Port:          8080-tcp
+
+Service:                nationalparks
+Weight:                 100 (100%)
+Endpoints:              10.1.9.8:8080
+</code></pre></div>
+<p>You see that it already has some labels. Now, use <code>oc label</code>:</p>
+<div class="highlight"><pre><span></span><code>oc label route nationalparks type=parksmap-backend
+</code></pre></div>
+<p>You will see something like:</p>
+<div class="highlight"><pre><span></span><code>route.route.openshift.io/nationalparks labeled
+</code></pre></div>
+<p>If you check your browser now:</p>
+<div class="highlight"><pre><span></span><code>https://parksmap-{{ project_namespace }}.{{cluster_subdomain}}/
+</code></pre></div>
+<p><img alt="MongoDB" src="/images/nationalparks-databases-new-parks.png" /></p>
+<p>You'll notice that the parks suddenly are showing up. That's really cool!</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../environment/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Environment" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Environment
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../returnoftheobservability/" class="md-footer__link md-footer__link--next" aria-label="Next: The Return of Observability" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              The Return of Observability
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 beezy.cloud - Licensed under the Apache-2.0 License
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/beezy-cloud/website" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>
